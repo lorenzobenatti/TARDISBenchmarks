@@ -7,7 +7,7 @@ jacoco_agent="$REPOSITORYHOMEPATH/CovarageTool/lib/jacocoagent.jar"
 junit_jar="$REPOSITORYHOMEPATH/CovarageTool/junit-4.12.jar"
 hamcrest_jar="$REPOSITORYHOMEPATH/CovarageTool/junit4-r4.13.2/lib/hamcrest-core-1.3.jar"
 jacoco_cli="$REPOSITORYHOMEPATH/CovarageTool/lib/jacococli.jar"
-file="benchmarksListBenatti.list"
+file="$REPOSITORYHOMEPATH/benchmarksListBenatti.list"
 BENCH=$BENCHMARK
 echo "[JACOCO LAUNCHER] Calculate results for $BENCHMARK"
 
