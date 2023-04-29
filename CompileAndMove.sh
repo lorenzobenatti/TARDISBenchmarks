@@ -26,9 +26,9 @@ echo "[UNZIP AND COMPILE SCRIPT] Compiling all benchmarks..."
 	
 #mvn compile && echo "[UNZIP AND COMPILE SCRIPT] $d compiled" || echo "[UNZIP AND COMPILE SCRIPT] $d: Failed"
 
-javac sinergy.SinergyEasy4TardisButHard4Evo.java
-javac sinergy.Easy4TardisButHard4EvoTest.java
-javac sinergy.RunEasy4TardisButHard4Evo.java
+javac sinergy.SinergyEasy4TardisButHard4Evo
+javac sinergy.Easy4TardisButHard4EvoTest
+javac sinergy.RunEasy4TardisButHard4Evo
 
 echo "[COMPILE AND MOVE SCRIPT] Compiling all Run files..."
 #for f in *.java
