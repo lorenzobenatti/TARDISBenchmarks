@@ -140,10 +140,14 @@ fi
 
 #Sinergy Easy4TardiButHard4Evo
 if [ -d sinergy ]; then
-	mkdir tardis-src/sinergy/target; mv tardis-src/sinergy/RunEasy4TardisButHard4Evo.class $_ && echo "[COMPILE AND MOVE SCRIPT] Moved Sinergy.class to $_" || echo "[COMPILE AND MOVE SCRIPT] Failed"
+	cd sinergy
+	mkdir target; mv tardis-src/sinergy/RunEasy4TardisButHard4Evo.class $_ && echo "[COMPILE AND MOVE SCRIPT] Moved Sinergy.class to $_" || echo "[COMPILE AND MOVE SCRIPT] Failed"
+	cd ..
 fi
 
 #Sinergy Hard4TardisButEasy4Evo
 if [ -d sinergy ]; then
-	mkdir tardis-src/sinergy/target; mv tardis-src/sinergy/RunHard4TardisButEasy4Evo.class $_ && echo "[COMPILE AND MOVE SCRIPT] Moved Sinergy.class to $_" || echo "[COMPILE AND MOVE SCRIPT] Failed"
+	cd sinergy
+	mkdir target; mv tardis-src/sinergy/RunHard4TardisButEasy4Evo.class $_ && echo "[COMPILE AND MOVE SCRIPT] Moved Sinergy.class to $_" || echo "[COMPILE AND MOVE SCRIPT] Failed"
+	cd ..
 fi
