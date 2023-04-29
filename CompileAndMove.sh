@@ -13,22 +13,26 @@ TOOLSJAR_PATH=/dev/hd2/usr/lib/jvm/jdk1.8.0_261/lib
 # -------------------------------------------------------------------------------
 
 #Compile all TARDIS runner
-cd tardis-src
+cd tardis-src/sinergy
 
 echo "[UNZIP AND COMPILE SCRIPT] Compiling all benchmarks..."
-	for d in */
-	do
-		if [ $d == "sinergy" ]; then
-    		cd $d && mvn compile && echo "[UNZIP AND COMPILE SCRIPT] $d compiled" || echo "[UNZIP AND COMPILE SCRIPT] $d: Failed"
-    		cd .. 
-    	fi
-	done
+	#for d in */
+	#do
+	#	if [ $d == "sinergy" ]; then
+    #		cd $d && mvn compile && echo "[UNZIP AND COMPILE SCRIPT] $d compiled" || echo "[UNZIP AND COMPILE SCRIPT] $d: Failed"
+    #		cd .. 
+    #	fi
+	#done
+	
+mvn compile && echo "[UNZIP AND COMPILE SCRIPT] $d compiled" || echo "[UNZIP AND COMPILE SCRIPT] $d: Failed"
 
 echo "[COMPILE AND MOVE SCRIPT] Compiling all Run files..."
 for f in *.java
 do
 	javac -cp $TARDIS_HOME_PATH/master/build/libs/tardis-master-0.2.0-SNAPSHOT.jar:$TARDIS_HOME_PATH/runtime/build/libs/sushi-lib-0.2.0-SNAPSHOT.jar:$TARDIS_HOME_PATH/jbse/build/libs/jbse-0.10.0-SNAPSHOT-shaded.jar:$TARDIS_HOME_PATH/lib/evosuite-shaded-1.2.1-SNAPSHOT.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/args4j/args4j/2.32/1ccacebdf8f2db750eb09a402969050f27695fb7/args4j-2.32.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.14.0/23cdb2c6babad9b2b0dcf47c6a2c29d504e4c7a8/log4j-api-2.14.0.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.14.0/e257b0562453f73eabac1bc3181ba33e79d193ed/log4j-core-2.14.0.jar:$TOOLSJAR_PATH/tools.jar $f && echo "[COMPILE AND MOVE SCRIPT] $f compiled" || echo "[COMPILE AND MOVE SCRIPT] $f: Failed"
 done
+
+cd ..
 
 #Move TARDIS runner to the benchmark folders
 echo "[COMPILE AND MOVE SCRIPT] Moving all Run files..."
