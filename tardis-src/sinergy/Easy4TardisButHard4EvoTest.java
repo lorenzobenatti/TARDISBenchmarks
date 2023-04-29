@@ -1,7 +1,5 @@
 package sinergy;
 
-import sinergy.*;
-
 public class Easy4TardisButHard4EvoTest{
 	
 	public void test0(){

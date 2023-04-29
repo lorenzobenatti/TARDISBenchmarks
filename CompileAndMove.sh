@@ -14,6 +14,16 @@ TOOLSJAR_PATH=/dev/hd2/usr/lib/jvm/jdk1.8.0_261/lib
 
 #Compile all TARDIS runner
 cd tardis-src/sinergy
+
+echo "[UNZIP AND COMPILE SCRIPT] Compiling all benchmarks..."
+	for d in */
+	do
+		if [ $d != "RunFiles/" ]; then
+    		cd $d && mvn compile && echo "[UNZIP AND COMPILE SCRIPT] $d compiled" || echo "[UNZIP AND COMPILE SCRIPT] $d: Failed"
+    		cd .. 
+    	fi
+	done
+
 echo "[COMPILE AND MOVE SCRIPT] Compiling all Run files..."
 for f in *.java
 do
