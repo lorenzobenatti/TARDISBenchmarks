@@ -94,7 +94,7 @@ sed -i "s/REPOSITORYHOMEPATH/$REPO_HOME_PATH_ESC/g" CovarageTool/benchmarksRepoP
 sed -i "s/TARDISHOMEPATH/$TARDIS_HOME_PATH_ESC/g" CovarageTool/benchmarksRepoPath.list
 
 #compile the Tardis logs analysis script
-javac CalculateResults.java && echo "[TARDIS LAUNCHER] CalculateResults.java compiled" || echo "[TARDIS LAUNCHER] Failed"
+javac tardis-src/CalculateResults.java && echo "[TARDIS LAUNCHER] CalculateResults.java compiled" || echo "[TARDIS LAUNCHER] Failed"
 
 #function to calculate the coverage of the seed tests only
 #parameters: $TMPDIR $seedTestNum $BENCHMARK $LOG_PATH/$dt/AUTHZFORCE $globalTime
