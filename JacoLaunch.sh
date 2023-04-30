@@ -83,7 +83,7 @@ class_path="$bin_classes:$tests_path_run:$junit_jar:$hamcrest_jar:$classpath_lis
 #Launch jacoco for javaagent
 java -javaagent:"$jacoco_agent" -cp "$class_path" org.junit.runner.JUnitCore $tests
 
-echo "[JACOCO LAUNCHER] Create JACOCOCLI report htlm for $BENCHMARK"
+echo "[JACOCO LAUNCHER] Create JACOCOCLI report html for $BENCHMARK"
 
 # Run jacoco.cli for generate html coverage results
 java -jar "$jacoco_cli" report jacoco.exec --classfiles "$bin_classes" --sourcefiles "$classes_source_folder" --html report
