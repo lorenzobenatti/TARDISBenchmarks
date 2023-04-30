@@ -5,14 +5,14 @@ SINERGY-1=
   bin=$REPOSITORYHOMEPATH/tardis-src/sinergy/target
   classes=sinergy.SinergyEasy4TardisButHard4Evo
   classpath=$TARDISHOMEPATH/jbse/build/classes/java/main:$TARDISHOMEPATH/runtime/build/classes/java/main:$TARDISHOMEPATH/libs/evosuite-shaded-1.2.1-SNAPSHOT.jar
-  project=pdfbox
+  project=sinergy
 }
 SINERGY-2=
 {
   src=$REPOSITORYHOMEPATH/pdfbox/pdfbox/src/main/java
   bin=$REPOSITORYHOMEPATH/pdfbox/pdfbox/target/classes
-  classes=org.apache.pdfbox.pdmodel.font.FileSystemFontProvider
+  classes=sinergy.SinergyHard4TardisButEasy4Evo
   classpath=$TARDISHOMEPATH/jbse/build/classes/java/main:$TARDISHOMEPATH/runtime/build/classes/java/main:$TARDISHOMEPATH/libs/evosuite-shaded-1.2.1-SNAPSHOT.jar
-  project=pdfbox
+  project=sinergy
 }
 }
