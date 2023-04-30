@@ -4,7 +4,7 @@ SINERGY-1=
   src=$REPOSITORYHOMEPATH/tardis-src
   bin=$REPOSITORYHOMEPATH/tardis-src/sinergy
   classes=sinergy.SinergyEasy4TardisButHard4Evo
-  classpath=$TARDISHOMEPATH/jbse/build/classes/java/main:$TARDISHOMEPATH/runtime/build/classes/java/main:$TARDISHOMEPATH/libs/evosuite-shaded-1.2.1-SNAPSHOT.jar
+  classpath=/dev/hd2/tardisFolderBenatti/jbse/build/classes/java/main:/dev/hd2/tardisFolderBenatti/runtime/build/classes/java/main:/dev/hd2/tardisFolderBenatti/libs/evosuite-shaded-1.2.1-SNAPSHOT.jar
   project=sinergy
 }
 SINERGY-2=
@@ -12,7 +12,7 @@ SINERGY-2=
   src=$REPOSITORYHOMEPATH/pdfbox/pdfbox/src/main/java
   bin=$REPOSITORYHOMEPATH/pdfbox/pdfbox/target/classes
   classes=sinergy.SinergyHard4TardisButEasy4Evo
-  classpath=$TARDISHOMEPATH/jbse/build/classes/java/main:$TARDISHOMEPATH/runtime/build/classes/java/main:$TARDISHOMEPATH/libs/evosuite-shaded-1.2.1-SNAPSHOT.jar
+  classpath=/dev/hd2/tardisFolderBenatti/jbse/build/classes/java/main:/dev/hd2/tardisFolderBenatti/runtime/build/classes/java/main:/dev/hd2/tardisFolderBenatti/libs/evosuite-shaded-1.2.1-SNAPSHOT.jar
   project=sinergy
 }
 }
