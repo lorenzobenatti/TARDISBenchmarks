@@ -22,7 +22,7 @@ public final class RunEasy4TardisButHard4Evo {
 	
 	public static final Path TMP_BASE_PATH         = SUBJECT_ROOT.resolve(Paths.get("tardis-tmp"));
 	public static final Path OUT_PATH              = SUBJECT_ROOT.resolve(Paths.get("tardis-test"));
-	public static final Path SUBJECT_PATH          = SUBJECT_ROOT.resolve(Paths.get("bin"));
+	public static final Path SUBJECT_PATH          = SUBJECT_ROOT.resolve(Paths.get("tardis-src"));
 	
 	public static void main(String[] s) throws Exception {
 		final String targetClass = "sinergy/SinergyEasy4TardisButHard4Evo";
