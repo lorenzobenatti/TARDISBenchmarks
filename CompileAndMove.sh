@@ -150,15 +150,15 @@ if [ -d guava9th ]; then
 fi
 
 #Sinergy Easy4TardiButHard4Evo
-if [ -d sinergy ]; then
-	cd sinergy
-	mkdir target; mv RunEasy4TardisButHard4Evo.class $_ && echo "[COMPILE AND MOVE SCRIPT] Moved Sinergy.class to $_" || echo "[COMPILE AND MOVE SCRIPT] Failed"
-	cd ..
-fi
-
+#if [ -d sinergy ]; then
+#	cd sinergy
+#	mkdir target; mv RunEasy4TardisButHard4Evo.class $_ && echo "[COMPILE AND MOVE SCRIPT] Moved Sinergy.class to $_" || echo "[COMPILE AND MOVE SCRIPT] Failed"
+#	cd ..
+#fi
+#
 #Sinergy Hard4TardisButEasy4Evo
-if [ -d sinergy ]; then
-	cd sinergy
-	mkdir target; mv RunHard4TardisButEasy4Evo.class $_ && echo "[COMPILE AND MOVE SCRIPT] Moved Sinergy.class to $_" || echo "[COMPILE AND MOVE SCRIPT] Failed"
-	cd ..
-fi
+#if [ -d sinergy ]; then
+#	cd sinergy
+#	mkdir target; mv RunHard4TardisButEasy4Evo.class $_ && echo "[COMPILE AND MOVE SCRIPT] Moved Sinergy.class to $_" || echo "[COMPILE AND MOVE SCRIPT] Failed"
+#	cd ..
+#fi
