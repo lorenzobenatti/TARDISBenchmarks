@@ -36,7 +36,7 @@ public final class RunEasy4TardisButHard4Evo {
 		final int numOfThreadsEvosuite = 1;
 		final int numTargetsEvosuiteJob = 5;
 		final float throttleFactorEvosuite = 1.0f;
-		final long timeBudgetDuration = 1;
+		final long timeBudgetDuration = 10;
 		final TimeUnit timeBudgetTimeUnit = TimeUnit.MINUTES;
 
 		final Options o = new Options();
