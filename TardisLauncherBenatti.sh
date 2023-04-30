@@ -16,7 +16,7 @@ TARDIS_HOME_PATH=/dev/hd2/tardisBenatti
 Z3_PATH=/dev/hd2/usr/opt/z3/z3-4.8.9-x64-ubuntu-16.04/bin/z3
 REPO_HOME_PATH=/dev/hd2/TARDISBenchmarks
 GRADLE_REPO_PATH=/dev/hd2/usr/.gradle
-LOG_PATH=/dev/hd2/tardisBenattiScripts/tardisLogs
+LOG_PATH=/dev/hd2/TARDISBenchmarks/tardis-out
 TOOLSJAR_PATH=/dev/hd2/usr/lib/jvm/jdk1.8.0_261/lib
 #____________________________________________________________________________
 
