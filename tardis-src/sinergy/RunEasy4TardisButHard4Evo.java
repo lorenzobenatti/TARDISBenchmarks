@@ -48,7 +48,7 @@ public final class RunEasy4TardisButHard4Evo {
 		o.setMaxDepth(maxDepth);
 		o.setNumOfThreadsJBSE(numOfThreadsJBSE);
 		o.setNumOfThreadsEvosuite(numOfThreadsEvosuite);
-		o.setNumTargetsEvosuiteJob(numTargetsEvosuiteJob);
+		//o.setNumTargetsEvosuiteJob(numTargetsEvosuiteJob);
 		o.setThrottleFactorEvosuite(throttleFactorEvosuite);
 		o.setGlobalTimeBudgetDuration(timeBudgetDuration);
 		o.setGlobalTimeBudgetUnit(timeBudgetTimeUnit);
