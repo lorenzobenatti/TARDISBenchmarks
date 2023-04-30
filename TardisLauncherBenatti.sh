@@ -734,7 +734,7 @@ if [[ " ${input_array[@]} " =~ " 23 " ]] || [[ " ${input_array[@]} " =~ " 1 " ]]
 		
 		echo "[TARDIS LAUNCHER] Tardis execution finished. Calculate results"
 		seedTestNum="$(java CalculateResults $LOG_PATH/$dt/SINERGY/tardisLog$BENCHMARK.txt $LOG_PATH/$dt/Results.csv Sinergy$BENCHMARK)"
-		TMPDIR=$(ls -td $REPO_HOME_PATH/tardis-src/sinergy/tardis-tmp/* | head -1)
+		TMPDIR=$(ls -td $REPO_HOME_PATH/tardis-src/sinergy/tardis-tmp | head -1)
 		if [ $doubleCoverageCalculation == "1" ]; then
 			seed_test_cov $TMPDIR "$(($seedTestNum-1))" $BENCHMARK $LOG_PATH/$dt/SINERGY $globalTime
 		fi

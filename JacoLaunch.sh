@@ -49,7 +49,7 @@ echo "classes source: $classes_source_folder"
 #MAKE A IF CONTROL FOR EXISTENCE OF THE FOLDER (SOMETIMES IT GOT NOT GENERATED)
 
 #LOOK FOR FOLDER WITH THE LATEST DATETIME
-tests_folder_run="$REPOSITORYHOMEPATH/$project/tardis-tmp"
+tests_folder_run="$REPOSITORYHOMEPATH/tardis-out"
 x_folder="$(find "$tests_folder_run" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort -n | tail -n 1)"
 tests_path_run="$tests_folder_run/$x_folder/bin"
 #echo "$tests_path_run"
