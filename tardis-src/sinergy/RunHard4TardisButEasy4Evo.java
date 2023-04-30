@@ -13,7 +13,7 @@ public final class RunHard4TardisButEasy4Evo {
 	public static final Path TARDIS_WORKSPACE      = Paths.get("/dev", "hd2", "tardisBenatti");
 	public static final Path SUBJECT_ROOT          = Paths.get("/dev", "hd2", "TARDISBenchmarks");
 	public static final Path Z3_PATH               = Paths.get("/dev", "hd2", "usr", "opt", "z3", "z3-4.8.9-x64-ubuntu-16.04", "bin", "z3");
-	public static final Path JAVA8_HOME			   = Paths.get("/dev", "hd2", "usr", "lib", "jvm", "jdk1.8.0_261", "lib");
+	public static final Path JAVA8_HOME			   = Paths.get("/dev", "hd2", "usr", "lib", "jvm", "jdk1.8.0_261");
 	
 	public static final Path JBSE_PATH             = TARDIS_WORKSPACE.resolve(Paths.get("jbse", "build", "classes", "java", "main"));
 	public static final Path EVOSUITE_PATH 		   = TARDIS_WORKSPACE.resolve(Paths.get("libs", "evosuite-shaded-1.2.1-SNAPSHOT.jar"));
