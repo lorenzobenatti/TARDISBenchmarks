@@ -732,7 +732,6 @@ if [[ " ${input_array[@]} " =~ " 23 " ]] || [[ " ${input_array[@]} " =~ " 1 " ]]
 		
 		cd ..
 		cd ..
-		cd ..
 		
 		echo "[TARDIS LAUNCHER] Tardis execution finished. Calculate results"
 		seedTestNum="$(java CalculateResults $LOG_PATH/$dt/SINERGY/tardisLog$BENCHMARK.txt $LOG_PATH/$dt/Results.csv Sinergy$BENCHMARK)"
