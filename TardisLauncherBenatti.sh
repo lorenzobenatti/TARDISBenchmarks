@@ -744,7 +744,7 @@ if [[ " ${input_array[@]} " =~ " 23 " ]] || [[ " ${input_array[@]} " =~ " 1 " ]]
 		#Clean filesystem if necessary
 		foldersize=$(du -sm $TMPDIR | cut -f1)
 		if [[ $foldersize -gt $sizeThreshold ]]; then
-			mkdir "${TMPDIR}_lite" ; cp -r $TMPDIR/test "${TMPDIR}_lite" ; rm -r $TMPDIR
+			mkdir "${TMPDIR}_lite" ; cp -r $TMPDIR "${TMPDIR}_lite" ; rm -r $TMPDIR
 		fi
 	done
 fi
