@@ -13,7 +13,7 @@ TOOLSJAR_PATH=/dev/hd2/usr/lib/jvm/jdk1.8.0_261/lib
 # -------------------------------------------------------------------------------
 
 #Compile all TARDIS runner
-cd tardis-src
+cd tardis-src/sinergy
 
 echo "[UNZIP AND COMPILE SCRIPT] Compiling all benchmarks..."
 	#for d in */
@@ -29,6 +29,8 @@ echo "[UNZIP AND COMPILE SCRIPT] Compiling all benchmarks..."
 javac -cp sinergy SinergyEasy4TardisButHard4Evo.java
 javac -cp sinergy Easy4TardisButHard4EvoTest.java
 javac -cp sinergy RunEasy4TardisButHard4Evo.java
+
+cd ..
 
 echo "[COMPILE AND MOVE SCRIPT] Compiling all Run files..."
 #for f in *.java
