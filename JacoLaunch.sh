@@ -52,7 +52,7 @@ echo "classes source: $classes_source_folder"
 tests_folder_run="$REPOSITORYHOMEPATH/tardis-out"
 x_folder="$(find "$tests_folder_run" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort -n | tail -n 1)"
 tests_path_run="$tests_folder_run/$x_folder/bin"
-#echo "$tests_path_run"
+echo "Test folder found: $tests_path_run"
 
 inner_folder_path="$tests_path_run"
 while [ "$(find "$inner_folder_path" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | wc -l)" -eq 1 ]; do
@@ -60,7 +60,8 @@ while [ "$(find "$inner_folder_path" -mindepth 1 -maxdepth 1 -type d -printf '%f
   inner_folder_path="$inner_folder_path/$inner_folder"
 done
 tests_path="$inner_folder_path"
-#echo "$tests_path"
+#tests_path="$tests_path_run/sinergy"
+echo "$tests_path"
 
 #Pass all test class
 tests=""
