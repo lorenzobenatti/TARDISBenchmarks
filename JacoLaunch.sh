@@ -11,6 +11,9 @@ file="$REPOSITORYHOMEPATH/benchmarksListBenatti.list"
 BENCH=$BENCHMARK
 echo "[JACOCO LAUNCHER] Calculate results for $BENCHMARK"
 
+date=$(date +%Y_%m_%d_%H_%M_%S)
+export date
+
 #EXTRACT FROM .list FILE:
 section=$(grep -A 6 "$BENCH=" "$file")
 src=$(echo "$section" | grep "src" | awk -F '=' '{print $2}')
@@ -94,7 +97,8 @@ echo "[JACOCO LAUNCHER] Create JACOCOCLI report html for $BENCHMARK"
 java -jar "$jacoco_cli" report jacoco.exec --classfiles "$bin_classes" --sourcefiles "$classes_source_folder" --html report
 
 #MOVING THE FOLDER IN OTHER PATH
-result_path="Reports/report$BENCH"
+mkdir -p Reports/report$BENCH$date
+result_path="Reports/report$BENCH$date"
 mv report $result_path && echo "[JACOCO LAUNCHER] Successfully moved results to: $result_path" || echo "[JACOCO LAUNCHER] Failed to move results to: $result_path"
 
 rm jacoco.exec
