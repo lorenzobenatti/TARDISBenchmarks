@@ -94,9 +94,7 @@ echo "[JACOCO LAUNCHER] Create JACOCOCLI report html for $BENCHMARK"
 java -jar "$jacoco_cli" report jacoco.exec --classfiles "$bin_classes" --sourcefiles "$classes_source_folder" --html report
 
 #MOVING THE FOLDER IN OTHER PATH
-mkdir $REPOSITORYHOMEPATH/$project/resultNestClass/report$BENCH
-result_path="$REPOSITORYHOMEPATH/$project/resultNestClass/report$BENCH"
-mv report $result_path
-echo "move results to: $result_path" 
+result_path="Reports/$project/report$BENCH"
+mv report $result_path && echo "[JACOCO LAUNCHER] Successfully moved results to: $result_path" || echo "[JACOCO LAUNCHER] Failed to move results to: $result_path"
 
 rm jacoco.exec
