@@ -2,7 +2,7 @@
 
 #Some paths and settings
 REPOSITORYHOMEPATH="/dev/hd2/TARDISBenchmarks"
-TARDISHOMEPATH="/dev/hd2/tardisFolderBenatti"
+TARDISHOMEPATH="/dev/hd2/tardisBenatti"
 jacoco_agent="$REPOSITORYHOMEPATH/CovarageTool/lib/jacocoagent.jar"
 junit_jar="$REPOSITORYHOMEPATH/CovarageTool/junit-4.12.jar"
 hamcrest_jar="$REPOSITORYHOMEPATH/CovarageTool/junit4-r4.13.2/lib/hamcrest-core-1.3.jar"
@@ -83,7 +83,7 @@ echo "[JACOCO LAUNCHER] Tests found: $tests"
 
 #classpth definitivo
 class_path="$bin_classes:$tests_path_run:$junit_jar:$hamcrest_jar:$classpath_list"
-#echo "class_path: $class_path"
+#echo "[JACOCO LAUNCHER] Class_path: $class_path"
 
 #Launch jacoco for javaagent
 java -javaagent:"$jacoco_agent" -cp "$class_path" org.junit.runner.JUnitCore $tests
