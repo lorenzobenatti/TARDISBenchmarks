@@ -19,6 +19,8 @@ packages=$(echo "$section" | grep "classes" | awk -F '=' '{print $2}' | tail -n 
 classpath_list=$(echo "$section" | grep "classpath" | awk -F '=' '{print $2}')
 project=$(echo "$section" | grep "project" | awk -F '=' '{print $2}')
 
+packages="sinergy"
+
 echo "[JACOCO LAUNCHER] Calculate results for packages: $packages"
 
 packages=$(echo "$packages" | sed 's/\.[^.]*$//')
@@ -76,6 +78,8 @@ for file in $tests_path/*.class; do
     tests="$tests $packages.$file_name"
   fi
 done
+
+echo "[JACOCO LAUNCHER] Tests found: $tests"
 
 #classpth definitivo
 class_path="$bin_classes:$tests_path_run:$junit_jar:$hamcrest_jar:$classpath_list"
