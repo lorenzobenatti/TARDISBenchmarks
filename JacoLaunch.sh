@@ -44,7 +44,7 @@ bin_classes="$bin_classes/$new_path_classes"
 
 #PATH FOR THE CLASSES sourcefiles
 classes_source_folder="$src/$new_path_classes"
-echo "classes source: $classes_source_folder"
+#echo "[JACOCO LAUNCHER] Classes source: $classes_source_folder"
 
 #MAKE A IF CONTROL FOR EXISTENCE OF THE FOLDER (SOMETIMES IT GOT NOT GENERATED)
 
@@ -52,7 +52,7 @@ echo "classes source: $classes_source_folder"
 tests_folder_run="$REPOSITORYHOMEPATH/tardis-out"
 x_folder="$(find "$tests_folder_run" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort -n | tail -n 1)"
 tests_path_run="$tests_folder_run/$x_folder/bin"
-echo "Test folder found: $tests_path_run"
+#echo "Test folder found: $tests_path_run"
 
 inner_folder_path="$tests_path_run"
 while [ "$(find "$inner_folder_path" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | wc -l)" -eq 1 ]; do
@@ -61,7 +61,7 @@ while [ "$(find "$inner_folder_path" -mindepth 1 -maxdepth 1 -type d -printf '%f
 done
 tests_path="$inner_folder_path"
 #tests_path="$tests_path_run/sinergy"
-echo "$tests_path"
+echo "[JACOCO LAUNCHER] Test folder: $tests_path"
 
 #Pass all test class
 tests=""
