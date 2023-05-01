@@ -733,12 +733,12 @@ if [[ " ${input_array[@]} " =~ " 23 " ]] || [[ " ${input_array[@]} " =~ " 1 " ]]
 		cd ..
 		
 		echo "[TARDIS LAUNCHER] Tardis execution finished. Calculate results"
-		seedTestNum="$(java CalculateResults $LOG_PATH/$dt/SINERGY/tardisLog$BENCHMARK.txt $LOG_PATH/$dt/Results.csv Sinergy$BENCHMARK)"
-		#TMPDIR=$(ls -td $REPO_HOME_PATH/tardis-src/sinergy/tardis-tmp | head -1)
-		TMPDIR=$REPO_HOME_PATH/tardis-src/sinergy/tardis-tmp
-		if [ $doubleCoverageCalculation == "1" ]; then
-			seed_test_cov $TMPDIR "$(($seedTestNum-1))" $BENCHMARK $LOG_PATH/$dt/SINERGY $globalTime
-		fi
+#		seedTestNum="$(java CalculateResults $LOG_PATH/$dt/SINERGY/tardisLog$BENCHMARK.txt $LOG_PATH/$dt/Results.csv Sinergy$BENCHMARK)"
+#		TMPDIR=$(ls -td $REPO_HOME_PATH/tardis-src/sinergy/tardis-tmp | head -1)
+#		TMPDIR=$REPO_HOME_PATH/tardis-src/sinergy/tardis-tmp
+#		if [ $doubleCoverageCalculation == "1" ]; then
+#			seed_test_cov $TMPDIR "$(($seedTestNum-1))" $BENCHMARK $LOG_PATH/$dt/SINERGY $globalTime
+#		fi
                 #Perform Jacoco
                 source JacoLaunch.sh
 		java -ea -Dsbst.benchmark.jacoco="$REPO_HOME_PATH/CovarageTool/jacocoagent.jar" -Dsbst.benchmark.java="java" -Dsbst.benchmark.javac="javac" -Dsbst.benchmark.config="$REPO_HOME_PATH/CovarageTool/benchmarksRepoPath.list" -Dsbst.benchmark.junit="$REPO_HOME_PATH/CovarageTool/junit-4.12.jar" -Dsbst.benchmark.junit.dependency="$REPO_HOME_PATH/CovarageTool/hamcrest-core-1.3.jar" -Dsbst.benchmark.pitest="$REPO_HOME_PATH/CovarageTool/pitest-1.1.11.jar:$REPO_HOME_PATH/CovarageTool/pitest-command-line-1.1.11.jar" -jar "$REPO_HOME_PATH/CovarageTool/benchmarktool-1.0.0-shaded.jar" TARDIS $BENCHMARK $LOG_PATH/$dt/SINERGY 1 $globalTime --only-compute-metrics $REPO_HOME_PATH/tardis-test
