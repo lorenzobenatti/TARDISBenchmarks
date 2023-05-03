@@ -30,7 +30,7 @@ javaMem="-Xms16G -Xmx16G -Xss1G"
 sizeThreshold=1000
 # Set timeoutThreshold variable to decide after how many minutes kill the 
 # execution if still running after $globalTime minutes
-timeoutThreshold=40
+timeoutThreshold=3
 # Set doubleCoverageCalculation to 1 to perform a double coverage calculation:
 # 1) coverage of the seeds test only 2) coverage of all the tests generated.
 # If doubleCoverageCalculation != 1 only the second one is performed.

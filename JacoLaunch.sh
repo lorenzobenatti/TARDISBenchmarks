@@ -35,7 +35,7 @@ classpath_list=$(echo "$classpath_list" | sed "s#\$TARDISHOMEPATH#$TARDISHOMEPAT
 #bin_classes necessita del path packages non puntato bensì backslashato
 
 # Print the extracted variables
-#echo "src: $src"
+echo "[JACOCO LAUNCHER] Sources: $src"
 #echo "bin: $bin_classes""
 #echo "classpath_list: $classpath_list"
 #echo "project: $project"
