@@ -80,7 +80,7 @@ for file in $tests_path/*.class; do
   # Append the file name with the correct format to the tests variable taking only Tests and no Wrapper
   #tests="$tests $project.$file_name"
   # && ( $file_name != "Easy4TardisButHard4EvoTest" ) && ( $file_name != "Hard4TardisButEasy4EvoTest" )
-  if [[ ( $file_name == *"$prefix"* ) && ( $file_name != *"scaffolding"* ) ]]; then
+  if [[ ( $file_name == *"$prefix"* ) && ( $file_name != *"scaffolding"* ) && ( $file_name != "Easy4TardisButHard4EvoTest" ) && ( $file_name != "Hard4TardisButEasy4EvoTest" ) ]]; then
     tests="$tests $packages.$file_name"
   fi
 done
