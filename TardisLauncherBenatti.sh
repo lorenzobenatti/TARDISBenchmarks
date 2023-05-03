@@ -30,7 +30,7 @@ javaMem="-Xms16G -Xmx16G -Xss1G"
 sizeThreshold=1000
 # Set timeoutThreshold variable to decide after how many minutes kill the 
 # execution if still running after $globalTime minutes
-timeoutThreshold=40
+timeoutThreshold=4
 # Set doubleCoverageCalculation to 1 to perform a double coverage calculation:
 # 1) coverage of the seeds test only 2) coverage of all the tests generated.
 # If doubleCoverageCalculation != 1 only the second one is performed.
@@ -72,7 +72,7 @@ echo "|  19) ZXING             |"
 echo "|  20) WEKA              |"
 echo "|  21) FASTJSON 9th      |"
 echo "|  22) GUAVA 9th         |"
-echo "|  23) SINERGY           |"
+echo "|  23) SINERGY E4TBH4E   |"
 echo "|  24) SINERGY H4TBE4E   |"
 echo " ------------------------ "
 read input
@@ -721,7 +721,7 @@ if [[ " ${input_array[@]} " =~ " 23 " ]] || [[ " ${input_array[@]} " =~ " 1 " ]]
 	mkdir $LOG_PATH/$dt/SINERGY
 	cp -f $REPO_HOME_PATH/CovarageTool/runtool $LOG_PATH/$dt/SINERGY
 	
-	for BENCHMARK in SINERGY-1 SINERGY-2
+	for BENCHMARK in SINERGY-1
 	do
 		echo "[TARDIS LAUNCHER] Run benchmark SINERGY -- Target class: $BENCHMARK"
 		#sed -i "s/\(setTargetClass(\).*\();\)/\1${BENCHMARK/-/_}\2/g" tardis-src/sinergy/RunEasy4TardisButHard4Evo.java
