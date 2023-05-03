@@ -73,6 +73,7 @@ echo "|  20) WEKA              |"
 echo "|  21) FASTJSON 9th      |"
 echo "|  22) GUAVA 9th         |"
 echo "|  23) SINERGY           |"
+echo "|  24) SINERGY H4TBE4E   |"
 echo " ------------------------ "
 read input
 input_array=($input)
@@ -715,12 +716,53 @@ if [[ " ${input_array[@]} " =~ " 22 " ]] || [[ " ${input_array[@]} " =~ " 1 " ]]
 	done
 fi
 
-#Sinergy
+#Sinergy both
 if [[ " ${input_array[@]} " =~ " 23 " ]] || [[ " ${input_array[@]} " =~ " 1 " ]]; then
 	mkdir $LOG_PATH/$dt/SINERGY
 	cp -f $REPO_HOME_PATH/CovarageTool/runtool $LOG_PATH/$dt/SINERGY
 	
 	for BENCHMARK in SINERGY-1 SINERGY-2
+	do
+		echo "[TARDIS LAUNCHER] Run benchmark SINERGY -- Target class: $BENCHMARK"
+		#sed -i "s/\(setTargetClass(\).*\();\)/\1${BENCHMARK/-/_}\2/g" tardis-src/sinergy/RunEasy4TardisButHard4Evo.java
+		bash CompileAndMove.sh
+		
+		cd tardis-src
+		
+		if [[ $BENCHMARK == "SINERGY-1" ]]; then
+		timeout -s 9 $timeoutTime java $javaMem -cp $REPO_HOME_PATH/tardis-src/sinergy:$TARDIS_HOME_PATH/master/build/libs/tardis-master-0.2.0-SNAPSHOT.jar:$TARDIS_HOME_PATH/runtime/build/libs/sushi-lib-0.2.0-SNAPSHOT.jar:$TARDIS_HOME_PATH/jbse/build/libs/jbse-0.10.0-SNAPSHOT-shaded.jar:$TARDIS_HOME_PATH/libs/evosuite-shaded-1.2.1-SNAPSHOT.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/args4j/args4j/2.32/1ccacebdf8f2db750eb09a402969050f27695fb7/args4j-2.32.jar:$TOOLSJAR_PATH/tools.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/com.github.javaparser/javaparser-core/3.15.9/998ab964f295e6cecd4467a76d4a6369a8193e5a/javaparser-core-3.15.9.jar:$TARDIS_HOME_PATH/jbse/libs/javassist.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.jacoco/org.jacoco.core/0.7.5.201505241946/1ea906dc5201d2a1bc0604f8650534d4bcaf4c95/org.jacoco.core-0.7.5.201505241946.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.ow2.asm/asm-debug-all/5.0.1/f69b5f7d96cec0d448acf1c1a266584170c9643b/asm-debug-all-5.0.1.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.14.0/23cdb2c6babad9b2b0dcf47c6a2c29d504e4c7a8/log4j-api-2.14.0.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.14.0/e257b0562453f73eabac1bc3181ba33e79d193ed/log4j-core-2.14.0.jar:. sinergy.RunEasy4TardisButHard4Evo |& tee $LOG_PATH/$dt/SINERGY/tardisLog$BENCHMARK.txt
+		fi
+		
+		if [[ $BENCHMARK == "SINERGY-2" ]]; then
+		timeout -s 9 $timeoutTime java $javaMem -cp $REPO_HOME_PATH/tardis-src/sinergy:$TARDIS_HOME_PATH/master/build/libs/tardis-master-0.2.0-SNAPSHOT.jar:$TARDIS_HOME_PATH/runtime/build/libs/sushi-lib-0.2.0-SNAPSHOT.jar:$TARDIS_HOME_PATH/jbse/build/libs/jbse-0.10.0-SNAPSHOT-shaded.jar:$TARDIS_HOME_PATH/libs/evosuite-shaded-1.2.1-SNAPSHOT.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/args4j/args4j/2.32/1ccacebdf8f2db750eb09a402969050f27695fb7/args4j-2.32.jar:$TOOLSJAR_PATH/tools.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/com.github.javaparser/javaparser-core/3.15.9/998ab964f295e6cecd4467a76d4a6369a8193e5a/javaparser-core-3.15.9.jar:$TARDIS_HOME_PATH/jbse/libs/javassist.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.jacoco/org.jacoco.core/0.7.5.201505241946/1ea906dc5201d2a1bc0604f8650534d4bcaf4c95/org.jacoco.core-0.7.5.201505241946.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.ow2.asm/asm-debug-all/5.0.1/f69b5f7d96cec0d448acf1c1a266584170c9643b/asm-debug-all-5.0.1.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.14.0/23cdb2c6babad9b2b0dcf47c6a2c29d504e4c7a8/log4j-api-2.14.0.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.14.0/e257b0562453f73eabac1bc3181ba33e79d193ed/log4j-core-2.14.0.jar:. sinergy.RunHard4TardisButEasy4Evo |& tee $LOG_PATH/$dt/SINERGY/tardisLog$BENCHMARK.txt
+		fi 
+		
+		cd ..
+		
+		echo "[TARDIS LAUNCHER] Tardis execution finished. Calculate results"
+#		seedTestNum="$(java CalculateResults $LOG_PATH/$dt/SINERGY/tardisLog$BENCHMARK.txt $LOG_PATH/$dt/Results.csv Sinergy$BENCHMARK)"
+#		TMPDIR=$(ls -td $REPO_HOME_PATH/tardis-src/sinergy/tardis-tmp | head -1)
+#		TMPDIR=$REPO_HOME_PATH/tardis-src/sinergy/tardis-tmp
+#		if [ $doubleCoverageCalculation == "1" ]; then
+#			seed_test_cov $TMPDIR "$(($seedTestNum-1))" $BENCHMARK $LOG_PATH/$dt/SINERGY $globalTime
+#		fi
+                #Perform Jacoco
+                source JacoLaunch.sh
+		#java -ea -Dsbst.benchmark.jacoco="$REPO_HOME_PATH/CovarageTool/jacocoagent.jar" -Dsbst.benchmark.java="java" -Dsbst.benchmark.javac="javac" -Dsbst.benchmark.config="$REPO_HOME_PATH/CovarageTool/benchmarksRepoPath.list" -Dsbst.benchmark.junit="$REPO_HOME_PATH/CovarageTool/junit-4.12.jar" -Dsbst.benchmark.junit.dependency="$REPO_HOME_PATH/CovarageTool/hamcrest-core-1.3.jar" -Dsbst.benchmark.pitest="$REPO_HOME_PATH/CovarageTool/pitest-1.1.11.jar:$REPO_HOME_PATH/CovarageTool/pitest-command-line-1.1.11.jar" -jar "$REPO_HOME_PATH/CovarageTool/benchmarktool-1.0.0-shaded.jar" TARDIS $BENCHMARK $LOG_PATH/$dt/SINERGY 1 $globalTime --only-compute-metrics $REPO_HOME_PATH/tardis-test
+		#Clean filesystem if necessary
+		foldersize=$(du -sm $TMPDIR | cut -f1)
+		if [[ $foldersize -gt $sizeThreshold ]]; then
+			mkdir "${TMPDIR}_lite" ; cp -r $TMPDIR "${TMPDIR}_lite" ; rm -r $TMPDIR
+		fi
+	done
+fi
+
+#Sinergy only Hard4TardisButEasy4Evo
+if [[ " ${input_array[@]} " =~ " 24 " ]] || [[ " ${input_array[@]} " =~ " 1 " ]]; then
+	mkdir $LOG_PATH/$dt/SINERGY
+	cp -f $REPO_HOME_PATH/CovarageTool/runtool $LOG_PATH/$dt/SINERGY
+	
+	for BENCHMARK in SINERGY-2
 	do
 		echo "[TARDIS LAUNCHER] Run benchmark SINERGY -- Target class: $BENCHMARK"
 		#sed -i "s/\(setTargetClass(\).*\();\)/\1${BENCHMARK/-/_}\2/g" tardis-src/sinergy/RunEasy4TardisButHard4Evo.java
