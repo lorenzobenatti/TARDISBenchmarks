@@ -48,7 +48,8 @@ bin_classes="$bin_classes/$new_path_classes"
 #echo "bin classes: $bin_classes"
 
 #PATH FOR THE CLASSES sourcefiles
-classes_source_folder="$src/$new_path_classes"
+#classes_source_folder="$src/$new_path_classes"
+classes_source_folder="/dev/hd2/TARDISBenchmarks/tardis-src"
 echo "[JACOCO LAUNCHER] Classes source: $classes_source_folder"
 
 #MAKE A IF CONTROL FOR EXISTENCE OF THE FOLDER (SOMETIMES IT GOT NOT GENERATED)
