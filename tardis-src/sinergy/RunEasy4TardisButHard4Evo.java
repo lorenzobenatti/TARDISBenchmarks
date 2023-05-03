@@ -40,7 +40,6 @@ public final class RunEasy4TardisButHard4Evo {
 		final TimeUnit timeBudgetTimeUnit = TimeUnit.MINUTES;
 
 		final Options o = new Options();
-		
 		o.setTargetClass(targetClass);
 		o.setTargetMethod(targetClass, targetMethodDescriptor, targetMethodName);
 		o.setInitialTestCase(initialTestClass, initialTestMethodDescriptor, initialTestMethodName);

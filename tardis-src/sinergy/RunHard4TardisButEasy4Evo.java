@@ -21,7 +21,7 @@ public final class RunHard4TardisButEasy4Evo {
 	
 	public static final Path TMP_BASE_PATH         = SUBJECT_ROOT.resolve(Paths.get("tardis-tmp"));
 	public static final Path OUT_PATH              = SUBJECT_ROOT.resolve(Paths.get("tardis-test"));
-	public static final Path SUBJECT_PATH          = SUBJECT_ROOT.resolve("bin");
+	public static final Path SUBJECT_PATH          = SUBJECT_ROOT.resolve(Paths.get("tardis-src"));
 	
 	public static void main(String[] s) throws Exception {
 		final String targetClass = "sinergy/SinergyHard4TardisButEasy4Evo";
@@ -46,7 +46,7 @@ public final class RunHard4TardisButEasy4Evo {
 		o.setMaxDepth(maxDepth);
 		o.setNumOfThreadsJBSE(numOfThreadsJBSE);
 		o.setNumOfThreadsEvosuite(numOfThreadsEvosuite);
-		// o.setNumTargetsEvosuiteJob(numTargetsEvosuiteJob);
+		//o.setNumTargetsEvosuiteJob(numTargetsEvosuiteJob);
 		o.setThrottleFactorEvosuite(throttleFactorEvosuite);
 		o.setGlobalTimeBudgetDuration(timeBudgetDuration);
 		o.setGlobalTimeBudgetUnit(timeBudgetTimeUnit);
