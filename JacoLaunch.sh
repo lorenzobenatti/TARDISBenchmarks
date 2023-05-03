@@ -79,7 +79,7 @@ for file in $tests_path/*.class; do
   file_name="$(basename "$file" .class)"
   # Append the file name with the correct format to the tests variable taking only Tests and no Wrapper
   #tests="$tests $project.$file_name"
-  if [[ ( $file_name == *"$prefix"* ) && ( $file_name != "Easy4TardisButHard4EvoTest" ) && ( $file_name != "Hard4TardisButEasy4EvoTest" ) ]]; then
+  if [[ ( $file_name == *"$prefix"* ) && ( $file_name != *"scaffolding"* ) && ( $file_name != "Easy4TardisButHard4EvoTest" ) && ( $file_name != "Hard4TardisButEasy4EvoTest" ) ]]; then
     tests="$tests $packages.$file_name"
   fi
 done
@@ -99,7 +99,7 @@ echo "[JACOCO LAUNCHER] Create JACOCOCLI report html for $BENCHMARK"
 java -jar "$jacoco_cli" report jacoco.exec --classfiles "$bin_classes" --sourcefiles "$classes_source_folder" --html report
 
 #MOVING THE FOLDER IN OTHER PATH
-mkdir -p "Reports/report_${BENCH}_${date}"
+mkdir -p "Reports/${BENCH}_report_${date}]"
 result_path="Reports/report$BENCH$date"
 mv report $result_path && echo "[JACOCO LAUNCHER] Successfully moved results to: $result_path" || echo "[JACOCO LAUNCHER] Failed to move results to: $result_path"
 
