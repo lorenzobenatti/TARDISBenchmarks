@@ -51,7 +51,7 @@ bin_classes="$bin_classes/$new_path_classes"
 #PATH FOR THE CLASSES sourcefiles
 #classes_source_folder="$src/$new_path_classes"
 classes_source_folder="/dev/hd2/TARDISBenchmarks/tardis-src"
-echo "[JACOCO LAUNCHER] Classes source: $classes_source_folder"
+#echo "[JACOCO LAUNCHER] Classes source: $classes_source_folder"
 
 #MAKE A IF CONTROL FOR EXISTENCE OF THE FOLDER (SOMETIMES IT GOT NOT GENERATED)
 
@@ -68,7 +68,7 @@ while [ "$(find "$inner_folder_path" -mindepth 1 -maxdepth 1 -type d -printf '%f
 done
 tests_path="$inner_folder_path"
 #tests_path="$tests_path_run/sinergy"
-echo "[JACOCO LAUNCHER] Test folder: $tests_path"
+#echo "[JACOCO LAUNCHER] Test folder: $tests_path"
 
 #Pass all test class
 tests=""
@@ -88,7 +88,7 @@ echo "[JACOCO LAUNCHER] Tests found: $tests"
 
 #classpth definitivo
 class_path="$bin_classes:$tests_path_run:$junit_jar:$hamcrest_jar:$classpath_list"
-#echo "[JACOCO LAUNCHER] Class_path: $class_path"
+echo "[JACOCO LAUNCHER] Class_path: $class_path"
 
 #Launch jacoco for javaagent
 java -javaagent:"$jacoco_agent" -cp "$class_path" org.junit.runner.JUnitCore $tests
