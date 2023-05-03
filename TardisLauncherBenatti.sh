@@ -30,7 +30,7 @@ javaMem="-Xms16G -Xmx16G -Xss1G"
 sizeThreshold=1000
 # Set timeoutThreshold variable to decide after how many minutes kill the 
 # execution if still running after $globalTime minutes
-timeoutThreshold=40
+timeoutThreshold=4
 # Set doubleCoverageCalculation to 1 to perform a double coverage calculation:
 # 1) coverage of the seeds test only 2) coverage of all the tests generated.
 # If doubleCoverageCalculation != 1 only the second one is performed.
@@ -741,7 +741,7 @@ if [[ " ${input_array[@]} " =~ " 23 " ]] || [[ " ${input_array[@]} " =~ " 1 " ]]
 #		fi
                 #Perform Jacoco
                 source JacoLaunch.sh
-		java -ea -Dsbst.benchmark.jacoco="$REPO_HOME_PATH/CovarageTool/jacocoagent.jar" -Dsbst.benchmark.java="java" -Dsbst.benchmark.javac="javac" -Dsbst.benchmark.config="$REPO_HOME_PATH/CovarageTool/benchmarksRepoPath.list" -Dsbst.benchmark.junit="$REPO_HOME_PATH/CovarageTool/junit-4.12.jar" -Dsbst.benchmark.junit.dependency="$REPO_HOME_PATH/CovarageTool/hamcrest-core-1.3.jar" -Dsbst.benchmark.pitest="$REPO_HOME_PATH/CovarageTool/pitest-1.1.11.jar:$REPO_HOME_PATH/CovarageTool/pitest-command-line-1.1.11.jar" -jar "$REPO_HOME_PATH/CovarageTool/benchmarktool-1.0.0-shaded.jar" TARDIS $BENCHMARK $LOG_PATH/$dt/SINERGY 1 $globalTime --only-compute-metrics $REPO_HOME_PATH/tardis-test
+		#java -ea -Dsbst.benchmark.jacoco="$REPO_HOME_PATH/CovarageTool/jacocoagent.jar" -Dsbst.benchmark.java="java" -Dsbst.benchmark.javac="javac" -Dsbst.benchmark.config="$REPO_HOME_PATH/CovarageTool/benchmarksRepoPath.list" -Dsbst.benchmark.junit="$REPO_HOME_PATH/CovarageTool/junit-4.12.jar" -Dsbst.benchmark.junit.dependency="$REPO_HOME_PATH/CovarageTool/hamcrest-core-1.3.jar" -Dsbst.benchmark.pitest="$REPO_HOME_PATH/CovarageTool/pitest-1.1.11.jar:$REPO_HOME_PATH/CovarageTool/pitest-command-line-1.1.11.jar" -jar "$REPO_HOME_PATH/CovarageTool/benchmarktool-1.0.0-shaded.jar" TARDIS $BENCHMARK $LOG_PATH/$dt/SINERGY 1 $globalTime --only-compute-metrics $REPO_HOME_PATH/tardis-test
 		#Clean filesystem if necessary
 		foldersize=$(du -sm $TMPDIR | cut -f1)
 		if [[ $foldersize -gt $sizeThreshold ]]; then
