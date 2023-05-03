@@ -35,7 +35,7 @@ classpath_list=$(echo "$classpath_list" | sed "s#\$TARDISHOMEPATH#$TARDISHOMEPAT
 #bin_classes necessita del path packages non puntato bensì backslashato
 
 # Print the extracted variables
-echo "[JACOCO LAUNCHER] Sources: $src"
+#echo "[JACOCO LAUNCHER] Sources: $src"
 #echo "bin: $bin_classes""
 #echo "classpath_list: $classpath_list"
 #echo "project: $project"
@@ -79,7 +79,8 @@ for file in $tests_path/*.class; do
   file_name="$(basename "$file" .class)"
   # Append the file name with the correct format to the tests variable taking only Tests and no Wrapper
   #tests="$tests $project.$file_name"
-  if [[ ( $file_name == *"$prefix"* ) && ( $file_name != *"scaffolding"* ) && ( $file_name != "Easy4TardisButHard4EvoTest" ) && ( $file_name != "Hard4TardisButEasy4EvoTest" ) ]]; then
+  # && ( $file_name != "Easy4TardisButHard4EvoTest" ) && ( $file_name != "Hard4TardisButEasy4EvoTest" )
+  if [[ ( $file_name == *"$prefix"* ) && ( $file_name != *"scaffolding"* ) ]]; then
     tests="$tests $packages.$file_name"
   fi
 done
