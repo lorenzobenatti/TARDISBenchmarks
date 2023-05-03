@@ -49,7 +49,7 @@ bin_classes="$bin_classes/$new_path_classes"
 
 #PATH FOR THE CLASSES sourcefiles
 classes_source_folder="$src/$new_path_classes"
-#echo "[JACOCO LAUNCHER] Classes source: $classes_source_folder"
+echo "[JACOCO LAUNCHER] Classes source: $classes_source_folder"
 
 #MAKE A IF CONTROL FOR EXISTENCE OF THE FOLDER (SOMETIMES IT GOT NOT GENERATED)
 
