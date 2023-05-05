@@ -17,6 +17,7 @@ public class SinergyHard4TardisButEasy4Evo {
 	
 
 	public void hard4TardisButEasy4Evo() {
+		System.out.println("Executing method hard4TardisButEasy4Evo()");
 		int count = 0;
 		for (int i = 0; i < array.length; ++i) {
 			if (array[i] != 0) {
@@ -30,6 +31,7 @@ public class SinergyHard4TardisButEasy4Evo {
 	}
 
 	private void easy4TardisButHard4Evo() {
+		System.out.println("Executing method easy4TardisButHard4Evo()");
 		int x = 99;
 		if (a > 1000000) {
 			x = b;
@@ -41,6 +43,7 @@ public class SinergyHard4TardisButEasy4Evo {
 	}
 	
 	private void hard4TardisButEasy4Evo_bis() {
+		System.out.println("Executing method hard4TardisButEasy4Evo_bis()");
 		int count = 0;
 		for (int i = 0; i < array.length; ++i) {
 			if (array[i] != 0) {
