@@ -106,4 +106,4 @@ mkdir -p Reports/${BENCH}_report_${date}
 result_path="Reports/${BENCH}_report_${date}"
 mv result $result_path && echo "[JACOCO LAUNCHER] Successfully moved results to: $result_path" || echo "[JACOCO LAUNCHER] Failed to move results to: $result_path"
 
-rm jacoco.exec
+#rm jacoco.exec
