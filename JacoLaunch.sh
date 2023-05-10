@@ -99,7 +99,7 @@ echo "[JACOCO LAUNCHER] Create JACOCOCLI report html for $BENCHMARK"
 # Run jacoco.cli for generate html coverage results
 #java -jar "$jacoco_cli" report jacoco.exec --classfiles "$bin_classes" --sourcefiles "$classes_source_folder" --html report
 
-java -jar "$jacoco_cli" report jacoco.exec --classfiles "$bin_classes" --sourcefiles "$classes_source_folder" --html htmlresult
+java -jar "$jacoco_cli" report jacoco.exec --classfiles "$bin_classes" --sourcefiles "$classes_source_folder" --html htmlreport
 
 #MOVING THE FOLDER IN OTHER PATH
 mkdir -p Reports/${BENCH}_report_${date}
