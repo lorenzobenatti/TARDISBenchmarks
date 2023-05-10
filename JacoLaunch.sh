@@ -44,8 +44,8 @@ classpath_list=$(echo "$classpath_list" | sed "s#\$TARDISHOMEPATH#$TARDISHOMEPAT
 #PATH FOR THE CLASSES BIN 
 new_path_classes=$(echo "$packages" | sed 's/\./\//g')
 #echo "bin_classesOLD: $bin_classes"
-bin_classes="$bin_classes/$new_path_classes"
-#bin_classes="$bin_classes"
+#bin_classes="$bin_classes/$new_path_classes"
+bin_classes="$bin_classes"
 #echo "bin classes: $bin_classes"
 
 #PATH FOR THE CLASSES sourcefiles
