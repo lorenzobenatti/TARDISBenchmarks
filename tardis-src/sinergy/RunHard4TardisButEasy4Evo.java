@@ -37,6 +37,7 @@ public final class RunHard4TardisButEasy4Evo {
 		final float throttleFactorEvosuite = 1.0f;
 		final long timeBudgetDuration = 10;
 		final TimeUnit timeBudgetTimeUnit = TimeUnit.MINUTES;
+		final boolean evosuiteNoDependency = true;
 
 		final Options o = new Options();
 		o.setTargetClass(targetClass);
@@ -60,6 +61,7 @@ public final class RunHard4TardisButEasy4Evo {
 		o.setEvosuitePath(EVOSUITE_PATH);
 		o.setEvosuiteMultiSearch(true);
 		o.setMaximumElapsedWithoutPathConditions(10);
+		o.setEvosuiteNoDependency(evosuiteNoDependency);
 		
 		final Main m = new Main(o);
 		m.start();
