@@ -22,7 +22,7 @@ TOOLSJAR_PATH=/dev/hd2/usr/lib/jvm/jdk1.8.0_261/lib
 
 # -------------------------------------------------------------------------------
 # Editable variables:
-
+globalTime=30
 # Set javaMem variable with xmx and/or xms value (-Xms16G -Xmx16G)
 javaMem="-Xms16G -Xmx16G -Xss1G"
 # Set sizeThreshold variable to choose the maximum size (MB) of tardis-tmp 
@@ -30,7 +30,7 @@ javaMem="-Xms16G -Xmx16G -Xss1G"
 sizeThreshold=1000
 # Set timeoutThreshold variable to decide after how many minutes kill the 
 # execution if still running after $globalTime minutes
-timeoutThreshold=40
+timeoutThreshold=1
 # Set doubleCoverageCalculation to 1 to perform a double coverage calculation:
 # 1) coverage of the seeds test only 2) coverage of all the tests generated.
 # If doubleCoverageCalculation != 1 only the second one is performed.
@@ -93,25 +93,6 @@ REPO_HOME_PATH_ESC=$(echo $REPO_HOME_PATH | sed 's_/_\\/_g')
 cp -f benchmarksListBenatti.list CovarageTool/benchmarksRepoPath.list
 sed -i "s/REPOSITORYHOMEPATH/$REPO_HOME_PATH_ESC/g" CovarageTool/benchmarksRepoPath.list
 sed -i "s/TARDISHOMEPATH/$TARDIS_HOME_PATH_ESC/g" CovarageTool/benchmarksRepoPath.list
-
-#compile the Tardis logs analysis script
-javac CalculateResults.java && echo "[TARDIS LAUNCHER] CalculateResults.java compiled" || echo "[TARDIS LAUNCHER] Failed"
-
-#function to calculate the coverage of the seed tests only
-#parameters: $TMPDIR $seedTestNum $BENCHMARK $LOG_PATH/$dt/AUTHZFORCE $globalTime
-seed_test_cov () {
-	#list of subfolders from deepest to shallowest
-	testDirs="$(find $1/test -depth -type d)"
-	#list of subfolders transformed into an array
-	arrTestDirs=($testDirs)
-	#create directory $TMPDIR/seedTest/deeper subdirectory minus everything before the test/ directory
-	testSubPath=$(echo ${arrTestDirs[0]} | sed 's/.*test\///g')
-	mkdir -p $1/seedTest/$testSubPath
-	for i in `seq 0 $2`; do
-		test -f $1/test/$testSubPath/*_${i}_Test.java && cp $1/test/$testSubPath/*_${i}_Test.java $1/seedTest/$testSubPath
-	done
-	java -ea -Dsbst.benchmark.jacoco="$REPO_HOME_PATH/CovarageTool/jacocoagent.jar" -Dsbst.benchmark.java="java" -Dsbst.benchmark.javac="javac" -Dsbst.benchmark.config="$REPO_HOME_PATH/CovarageTool/benchmarksRepoPath.list" -Dsbst.benchmark.junit="$REPO_HOME_PATH/CovarageTool/junit-4.12.jar" -Dsbst.benchmark.junit.dependency="$REPO_HOME_PATH/CovarageTool/hamcrest-core-1.3.jar" -Dsbst.benchmark.pitest="$REPO_HOME_PATH/CovarageTool/pitest-1.1.11.jar:$REPO_HOME_PATH/CovarageTool/pitest-command-line-1.1.11.jar" -jar "$REPO_HOME_PATH/CovarageTool/benchmarktool-1.0.0-shaded.jar" SEEDTARDIS $3 $4 1 $5 --only-compute-metrics $1/seedTest
-}
 
 #if set, run system resources logging script
 if [ $systemlogging == "1" ]; then

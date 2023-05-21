@@ -36,9 +36,10 @@ public final class RunEasy4TardisButHard4Evo {
 		final int numOfThreadsEvosuite = 1;
 		final int numTargetsEvosuiteJob = 5;
 		final float throttleFactorEvosuite = 1.0f;
-		final long timeBudgetDuration = 10;
+		final long timeBudgetDuration = 30;
 		final TimeUnit timeBudgetTimeUnit = TimeUnit.MINUTES;
 		final boolean evosuiteNoDependency = true;
+		final boolean evosuiteMultiSearch = true;
 
 		final Options o = new Options();
 		o.setTargetClass(targetClass);
@@ -48,7 +49,6 @@ public final class RunEasy4TardisButHard4Evo {
 		o.setMaxDepth(maxDepth);
 		o.setNumOfThreadsJBSE(numOfThreadsJBSE);
 		o.setNumOfThreadsEvosuite(numOfThreadsEvosuite);
-		//o.setNumTargetsEvosuiteJob(numTargetsEvosuiteJob);
 		o.setThrottleFactorEvosuite(throttleFactorEvosuite);
 		o.setGlobalTimeBudgetDuration(timeBudgetDuration);
 		o.setGlobalTimeBudgetUnit(timeBudgetTimeUnit);
@@ -60,9 +60,10 @@ public final class RunEasy4TardisButHard4Evo {
 		o.setOutDirectory(OUT_PATH);
 		o.setSushiLibPath(SUSHI_LIB_PATH);
 		o.setEvosuitePath(EVOSUITE_PATH);
-		o.setEvosuiteMultiSearch(true);
+		o.setEvosuiteMultiSearch(evosuiteMultiSearch);
 		o.setMaximumElapsedWithoutPathConditions(10);
 		o.setEvosuiteNoDependency(evosuiteNoDependency);
+		o.setNumTargetsEvosuiteJob(numTargetsEvosuiteJob);
 		
 		final Main m = new Main(o);
 		m.start();
