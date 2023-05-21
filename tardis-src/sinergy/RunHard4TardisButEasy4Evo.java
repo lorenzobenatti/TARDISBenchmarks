@@ -38,7 +38,7 @@ public final class RunHard4TardisButEasy4Evo {
 		final long timeBudgetDuration = 30;
 		final TimeUnit timeBudgetTimeUnit = TimeUnit.MINUTES;
 		final boolean evosuiteNoDependency = true;
-		final boolean evosuiteMultiSearch = true;
+		final boolean evosuiteMultiSearch = false;
 
 		final Options o = new Options();
 		o.setTargetClass(targetClass);
