@@ -62,7 +62,7 @@ public final class RunHard4TardisButEasy4Evo {
 		o.setEvosuiteMultiSearch(evosuiteMultiSearch);
 		o.setMaximumElapsedWithoutPathConditions(10);
 		o.setEvosuiteNoDependency(evosuiteNoDependency);
-		//o.setNumTargetsEvosuiteJob(numTargetsEvosuiteJob);
+		o.setNumTargetsEvosuiteJob(numTargetsEvosuiteJob);
 		
 		final Main m = new Main(o);
 		m.start();
