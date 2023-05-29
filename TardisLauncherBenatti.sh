@@ -22,7 +22,7 @@ TOOLSJAR_PATH=/dev/hd2/usr/lib/jvm/jdk1.8.0_261/lib
 
 # -------------------------------------------------------------------------------
 # Editable variables:
-globalTime=30
+#globalTime=30
 # Set javaMem variable with xmx and/or xms value (-Xms16G -Xmx16G)
 javaMem="-Xms16G -Xmx16G -Xss1G"
 # Set sizeThreshold variable to choose the maximum size (MB) of tardis-tmp 
