@@ -19,7 +19,7 @@ LOG_PATH=/dev/hd2/tardisBenattiScripts/tardisLogs
 TOOLSJAR_PATH=/dev/hd2/usr/lib/jvm/jdk1.8.0_261/lib
 # -------------------------------------------------------------------------------
 
-globalTime=60 # I set it as the same for all experiments (except for MIPC)
+globalTime=2 # I set it as the same for all experiments (except for MIPC)
 
 # kill all processes made by benatti which aren't system processes, which isn't the current process, which isn't a bash process and which isn't one of the processes which must be still running for xrdp
 
@@ -60,28 +60,28 @@ if [ $# -ne 2 ]; then
   
   echo " ------------------------ "
   echo "|  1)  ALL BENCHMARKS    |"
-  echo "|  2)  AUTHZFORCE (0)    |"
-  echo "|  3)  BCEL       (0)    |"
-  echo "|  4)  DUBBO      (1)    |"
-  echo "|  5)  FASTJSON   (1)    |"
-  echo "|  6)  FESCAR     (0)    |"
-  echo "|  7)  GSON       (1)    |" 
-  echo "|  8)  GUAVA      (2)    |"
-  echo "|  9)  IMAGE      (1)    |"
-  echo "|  10) JSOUP      (0)    |"
-  echo "|  11) JXPATH     (0)    |"
-  echo "|  12) LA4J       (1)    |"
-  echo "|  13) OKHTTP (broken)   |"
-  echo "|  14) OKIO       (0)    |"
-  echo "|  15) PDFBOX     (1)    |"
-  echo "|  16) RE2J       (0)    |"
-  echo "|  17) SPOON      (0)    |"
-  echo "|  18) WEBMAGIC   (0)    |"
-  echo "|  19) ZXING (broken)    |"
-  echo "|  20) WEKA       (1)    |"
-  echo "|  21) FASTJSON9th(0)    |"
-  echo "|  22) GUAVA9th   (1)    |"
-  echo "|  23) MIPC (no report)  |"
+  echo "|  2)  AUTHZFORCE        |"
+  echo "|  3)  BCEL              |"
+  echo "|  4)  DUBBO             |"
+  echo "|  5)  FASTJSON          |"
+  echo "|  6)  FESCAR            |"
+  echo "|  7)  GSON              |" 
+  echo "|  8)  GUAVA             |"
+  echo "|  9)  IMAGE             |"
+  echo "|  10) JSOUP             |"
+  echo "|  11) JXPATH            |"
+  echo "|  12) LA4J              |"
+  echo "|  13) OKHTTP (err)      |"
+  echo "|  14) OKIO              |"
+  echo "|  15) PDFBOX            |"
+  echo "|  16) RE2J              |"
+  echo "|  17) SPOON             |"
+  echo "|  18) WEBMAGIC          |"
+  echo "|  19) ZXING (err)       |"
+  echo "|  20) WEKA              |"
+  echo "|  21) FASTJSON9th       |"
+  echo "|  22) GUAVA9th          |"
+  echo "|  23) MIPC (no rpt)     |"
   echo " ------------------------ "
   
   exit 1
