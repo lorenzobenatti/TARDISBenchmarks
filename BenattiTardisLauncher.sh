@@ -49,7 +49,7 @@ for pid in $(echo "$pids" | tr ',' ' '); do
 done
 
 # PASS 2 ARGUMENTS: 
-# - THE INDEX INFEASIBILITY (true or false)
+# - THE EVOSUITE MULTISEARCH (true or false)
 # - THE EXPERIMENT NUMBER (IT CAN BE 1 TO RUN ALL EXPERIMENTS)
 
 # Check if three arguments were provided
