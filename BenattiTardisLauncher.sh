@@ -19,7 +19,7 @@ LOG_PATH=/dev/hd2/tardisBenattiScripts/tardisLogs
 TOOLSJAR_PATH=/dev/hd2/usr/lib/jvm/jdk1.8.0_261/lib
 # -------------------------------------------------------------------------------
 
-globalTime=2 # I set it as the same for all experiments (except for MIPC)
+globalTime=60
 
 # kill all processes made by benatti which aren't system processes, which isn't the current process, which isn't a bash process and which isn't one of the processes which must be still running for xrdp
 
