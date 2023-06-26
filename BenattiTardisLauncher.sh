@@ -308,7 +308,7 @@ fi
 
 #Dubbo
 if [ "$input_number" -eq 4 ] || [ "$input_number" -eq 1 ]; then
-	for EXEC_NUM in {1..3}; do
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="DUBBO"
 		#experiment folder name
@@ -376,7 +376,7 @@ if [ "$input_number" -eq 4 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
+	#done
 fi
 
 #Fastjson
