@@ -317,8 +317,8 @@ if [ "$input_number" -eq 4 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunDubbo"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		#benchmarks_array=("DUBBO-2" "DUBBO-3" "DUBBO-4" "DUBBO-5" "DUBBO-6" "DUBBO-7" "DUBBO-8" "DUBBO-9" "DUBBO-10")
-        benchmarks_array=("DUBBO-3")
+		benchmarks_array=("DUBBO-2" "DUBBO-3" "DUBBO-4" "DUBBO-5" "DUBBO-6" "DUBBO-7" "DUBBO-8" "DUBBO-9" "DUBBO-10")
+        #benchmarks_array=("DUBBO-3")
 		#length
 		number=${#benchmarks_array[@]}
 
