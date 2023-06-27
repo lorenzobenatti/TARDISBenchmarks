@@ -19,7 +19,7 @@ LOG_PATH=/dev/hd2/tardisBenattiScripts/tardisLogs
 TOOLSJAR_PATH=/dev/hd2/usr/lib/jvm/jdk1.8.0_261/lib
 # -------------------------------------------------------------------------------
 
-globalTime=60
+globalTime=30
 
 # kill all processes made by benatti which aren't system processes, which isn't the current process, which isn't a bash process and which isn't one of the processes which must be still running for xrdp
 
@@ -55,7 +55,7 @@ done
 # Check if three arguments were provided
 if [ $# -ne 2 ]; then
   echo "[ERROR] Usage: bash BenattiTardisLauncher.sh <true|false> <number>"
-  echo "<true|false> is the evosuiteMultiSearch"
+  echo "<true|false> is evosuiteMultiSearch"
   echo "<number> is the experiment number chosen from the list below"
   
   echo " ------------------------ "
@@ -152,9 +152,9 @@ sed -i "s/TARDISHOMEPATH/$TARDIS_HOME_PATH_ESC/g" CovarageTool/benchmarksRepoPat
 
 #Authzforce
 if [ "$input_number" -eq 2 ] || [ "$input_number" -eq 1 ]; then
-	echo "[TARDIS LAUNCHER] No benchmark for AUTHZFORCE."
-	: '
-	for EXEC_NUM in {1..3}; do
+	#echo "[TARDIS LAUNCHER] No benchmark for AUTHZFORCE."
+	#: '
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="AUTHZFORCE"
 		#experiment folder name
@@ -163,8 +163,8 @@ if [ "$input_number" -eq 2 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunAuthzforce1"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		#benchmarks_array=("AUTHZFORCE-1" "AUTHZFORCE-11" "AUTHZFORCE-27" "AUTHZFORCE-32" "AUTHZFORCE-33" "AUTHZFORCE-48")
-		benchmarks_array=("AUTHZFORCE-48")
+		benchmarks_array=("AUTHZFORCE-1" "AUTHZFORCE-11" "AUTHZFORCE-27" "AUTHZFORCE-32" "AUTHZFORCE-33" "AUTHZFORCE-48")
+		#benchmarks_array=("AUTHZFORCE-48")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -224,15 +224,15 @@ if [ "$input_number" -eq 2 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
-	'
+	#done
+	#'
 fi
 
 #Bcel
 if [ "$input_number" -eq 3 ] || [ "$input_number" -eq 1 ]; then
-	echo "[TARDIS LAUNCHER] No benchmark for BCEL."
-	: '
-	for EXEC_NUM in {1..3}; do
+	#echo "[TARDIS LAUNCHER] No benchmark for BCEL."
+	#: '
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="BCEL"
 		#experiment folder name
@@ -241,8 +241,8 @@ if [ "$input_number" -eq 3 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunBcel"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		#benchmarks_array=("BCEL-1" "BCEL-2" "BCEL-3" "BCEL-4" "BCEL-5" "BCEL-6" "BCEL-7")
-		benchmarks_array=()
+		benchmarks_array=("BCEL-1" "BCEL-2" "BCEL-3" "BCEL-4" "BCEL-5" "BCEL-6" "BCEL-7")
+		#benchmarks_array=()
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -302,12 +302,12 @@ if [ "$input_number" -eq 3 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
-	'
+	#done
+	#'
 fi
 
 #Dubbo
-if [ "$input_number" -eq 4 ] || [ "$input_number" -eq 1 ]; then
+if [ "$input_number" -eq 4 ]; then #|| [ "$input_number" -eq 1 ]
 	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="DUBBO"
@@ -381,7 +381,7 @@ fi
 
 #Fastjson
 if [ "$input_number" -eq 5 ] || [ "$input_number" -eq 1 ]; then
-	for EXEC_NUM in {1..3}; do
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="FASTJSON"
 		#experiment folder name
@@ -390,8 +390,8 @@ if [ "$input_number" -eq 5 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunFastjson"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		#benchmarks_array=("FASTJSON-1" "FASTJSON-2" "FASTJSON-3" "FASTJSON-4" "FASTJSON-5" "FASTJSON-6" "FASTJSON-7" "FASTJSON-8" "FASTJSON-9" "FASTJSON-10")
-		benchmarks_array=("FASTJSON-8")
+		benchmarks_array=("FASTJSON-2" "FASTJSON-3" "FASTJSON-4" "FASTJSON-5" "FASTJSON-6" "FASTJSON-7" "FASTJSON-8" "FASTJSON-9" "FASTJSON-10")
+		#benchmarks_array=("FASTJSON-8")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -449,14 +449,14 @@ if [ "$input_number" -eq 5 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
+	#done
 fi
 
 #Fescar
 if [ "$input_number" -eq 6 ] || [ "$input_number" -eq 1 ]; then
-	echo "[TARDIS LAUNCHER] No benchmark for FESCAR."
-	: '
-	for EXEC_NUM in {1..3}; do
+	#echo "[TARDIS LAUNCHER] No benchmark for FESCAR."
+	#: '
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="FESCAR"
 		#experiment folder name
@@ -465,8 +465,8 @@ if [ "$input_number" -eq 6 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunFescar"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		#benchmarks_array=("FESCAR-12" "FESCAR-18" "FESCAR-23" "FESCAR-36" "FESCAR-2" "FESCAR-5" "FESCAR-9" "FESCAR-10" "FESCAR-13" "FESCAR-17" "FESCAR-28" "FESCAR-33" "FESCAR-34")
-		benchmarks_array=("FESCAR-9")
+		benchmarks_array=("FESCAR-18" "FESCAR-23" "FESCAR-36" "FESCAR-2" "FESCAR-5" "FESCAR-9" "FESCAR-10" "FESCAR-13" "FESCAR-17" "FESCAR-28" "FESCAR-33" "FESCAR-34")
+		#benchmarks_array=("FESCAR-9")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -524,13 +524,13 @@ if [ "$input_number" -eq 6 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
-	'
+	#done
+	#'
 fi
 
 #Gson
 if [ "$input_number" -eq 7 ] || [ "$input_number" -eq 1 ]; then
-	for EXEC_NUM in {1..3}; do
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="GSON"
 		#experiment folder name
@@ -539,8 +539,8 @@ if [ "$input_number" -eq 7 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunGson"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		#benchmarks_array=("GSON-1" "GSON-2" "GSON-3" "GSON-4" "GSON-5" "GSON-6" "GSON-7" "GSON-8" "GSON-9" "GSON-10")
-		benchmarks_array=("GSON-2")
+		benchmarks_array=("GSON-1" "GSON-2" "GSON-3" "GSON-4" "GSON-5" "GSON-6" "GSON-7" "GSON-8" "GSON-9" "GSON-10")
+		#benchmarks_array=("GSON-2")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -598,12 +598,12 @@ if [ "$input_number" -eq 7 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
+	#done
 fi
 
 #Guava
 if [ "$input_number" -eq 8 ] || [ "$input_number" -eq 1 ]; then
-	for EXEC_NUM in {1..3}; do
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="GUAVA"
 		#experiment folder name
@@ -612,8 +612,8 @@ if [ "$input_number" -eq 8 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunGuava"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		#benchmarks_array=("GUAVA-90" "GUAVA-128" "GUAVA-159" "GUAVA-169" "GUAVA-181" "GUAVA-184" "GUAVA-196" "GUAVA-212" "GUAVA-224")
-		benchmarks_array=("GUAVA-181" "GUAVA-224")
+		benchmarks_array=("GUAVA-90" "GUAVA-128" "GUAVA-159" "GUAVA-169" "GUAVA-181" "GUAVA-184" "GUAVA-196" "GUAVA-212" "GUAVA-224")
+		#benchmarks_array=("GUAVA-181" "GUAVA-224")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -671,12 +671,12 @@ if [ "$input_number" -eq 8 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
+	#done
 fi
 
 #Image
 if [ "$input_number" -eq 9 ] || [ "$input_number" -eq 1 ]; then
-	for EXEC_NUM in {1..3}; do
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="IMAGE"
 		#experiment folder name
@@ -685,8 +685,8 @@ if [ "$input_number" -eq 9 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunImage"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		#benchmarks_array=("IMAGE-1" "IMAGE-2" "IMAGE-3" "IMAGE-4")
-		benchmarks_array=("IMAGE-3")
+		benchmarks_array=("IMAGE-2" "IMAGE-3" "IMAGE-4")
+		#benchmarks_array=("IMAGE-3")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -744,14 +744,14 @@ if [ "$input_number" -eq 9 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
+	#done
 fi
 
 #Jsoup
 if [ "$input_number" -eq 10 ] || [ "$input_number" -eq 1 ]; then
-	echo "[TARDIS LAUNCHER] No benchmark for JSOUP."
-	: '
-	for EXEC_NUM in {1..3}; do
+	#echo "[TARDIS LAUNCHER] No benchmark for JSOUP."
+	#: '
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="JSOUP"
 		#experiment folder name
@@ -760,8 +760,8 @@ if [ "$input_number" -eq 10 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunJsoup"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		#benchmarks_array=("JSOUP-1" "JSOUP-2" "JSOUP-3" "JSOUP-4" "JSOUP-5")
-		benchmarks_array=("JSOUP-5")
+		benchmarks_array=("JSOUP-1" "JSOUP-2" "JSOUP-3" "JSOUP-4" "JSOUP-5")
+		#benchmarks_array=("JSOUP-5")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -819,15 +819,15 @@ if [ "$input_number" -eq 10 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
-	'
+	#done
+	#'
 fi
 
 #Jxpath
 if [ "$input_number" -eq 11 ] || [ "$input_number" -eq 1 ]; then
-	echo "[TARDIS LAUNCHER] No benchmark for JXPATH."
-	: '
-	for EXEC_NUM in {1..3}; do
+	#echo "[TARDIS LAUNCHER] No benchmark for JXPATH."
+	#: '
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="JXPATH"
 		#experiment folder name
@@ -836,8 +836,8 @@ if [ "$input_number" -eq 11 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunJxpath"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		#benchmarks_array=("JXPATH-1" "JXPATH-2" "JXPATH-3" "JXPATH-4" "JXPATH-5" "JXPATH-6" "JXPATH-7" "JXPATH-8" "JXPATH-9" "JXPATH-10")
-        benchmarks_array=("JXPATH-10")
+		benchmarks_array=("JXPATH-1" "JXPATH-2" "JXPATH-3" "JXPATH-4" "JXPATH-5" "JXPATH-7" "JXPATH-8" "JXPATH-9" "JXPATH-10")
+        #benchmarks_array=("JXPATH-10")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -895,13 +895,13 @@ if [ "$input_number" -eq 11 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
-	'
+	#done
+	#'
 fi
 
 #La4j
 if [ "$input_number" -eq 12 ] || [ "$input_number" -eq 1 ]; then
-	for EXEC_NUM in {1..3}; do
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="LA4J"
 		#experiment folder name
@@ -910,8 +910,8 @@ if [ "$input_number" -eq 12 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunLa4j"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		#benchmarks_array=("LA4J-1" "LA4J-2" "LA4J-3" "LA4J-4" "LA4J-5" "LA4J-6" "LA4J-7" "LA4J-8" "LA4J-9" "LA4J-10")
-		benchmarks_array=("LA4J-3")
+		benchmarks_array=("LA4J-1" "LA4J-2" "LA4J-3" "LA4J-4" "LA4J-6" "LA4J-7" "LA4J-9" "LA4J-10")
+		#benchmarks_array=("LA4J-3")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -969,7 +969,7 @@ if [ "$input_number" -eq 12 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
+	#done
 fi
 
 #Okhttp !!! BROKEN PROJECT BUILD !!!
@@ -1047,9 +1047,9 @@ fi
 
 #Okio
 if [ "$input_number" -eq 14 ] || [ "$input_number" -eq 1 ]; then
-	echo "[TARDIS LAUNCHER] No benchmark for OKIO."
-	: '
-	for EXEC_NUM in {1..3}; do
+	#echo "[TARDIS LAUNCHER] No benchmark for OKIO."
+	#: '
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="OKIO"
 		#experiment folder name
@@ -1058,8 +1058,8 @@ if [ "$input_number" -eq 14 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunOkio"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		#benchmarks_array=("OKIO-1" "OKIO-4" "OKIO-5" "OKIO-6" "OKIO-7" "OKIO-8" "OKIO-9" "OKIO-10")
-		benchmarks_array=("OKIO-1")
+		benchmarks_array=("OKIO-1" "OKIO-4" "OKIO-5" "OKIO-6" "OKIO-7" "OKIO-8" "OKIO-9" "OKIO-10")
+		#benchmarks_array=("OKIO-1")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -1117,13 +1117,13 @@ if [ "$input_number" -eq 14 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
-	'
+	#done
+	#'
 fi
 
 #Pdfbox
 if [ "$input_number" -eq 15 ] || [ "$input_number" -eq 1 ]; then
-	for EXEC_NUM in {1..3}; do
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="PDFBOX"
 		#experiment folder name
@@ -1132,8 +1132,8 @@ if [ "$input_number" -eq 15 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunPdfbox"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		#benchmarks_array=("PDFBOX-8" "PDFBOX-22" "PDFBOX-26" "PDFBOX-40" "PDFBOX-62" "PDFBOX-83" "PDFBOX-91" "PDFBOX-117" "PDFBOX-127" "PDFBOX-157" "PDFBOX-214" "PDFBOX-220" "PDFBOX-229" "PDFBOX-234" "PDFBOX-235" "PDFBOX-265" "PDFBOX-278" "PDFBOX-285")
-		benchmarks_array=("PDFBOX-214")
+		benchmarks_array=("PDFBOX-8" "PDFBOX-22" "PDFBOX-26" "PDFBOX-40" "PDFBOX-62" "PDFBOX-83" "PDFBOX-91" "PDFBOX-117" "PDFBOX-127" "PDFBOX-157" "PDFBOX-214" "PDFBOX-220" "PDFBOX-229" "PDFBOX-234" "PDFBOX-235" "PDFBOX-265" "PDFBOX-278" "PDFBOX-285")
+		#benchmarks_array=("PDFBOX-214")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -1191,14 +1191,14 @@ if [ "$input_number" -eq 15 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
+	#done
 fi
 
 #Re2j
 if [ "$input_number" -eq 16 ] || [ "$input_number" -eq 1 ]; then
-	echo "[TARDIS LAUNCHER] No benchmark for RE2J."
-	: '
-	for EXEC_NUM in {1..3}; do
+	#echo "[TARDIS LAUNCHER] No benchmark for RE2J."
+	#: '
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="RE2J"
 		#experiment folder name
@@ -1207,8 +1207,8 @@ if [ "$input_number" -eq 16 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunRe2j"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		#benchmarks_array=("RE2J-1" "RE2J-2" "RE2J-3" "RE2J-4" "RE2J-5" "RE2J-6" "RE2J-7" "RE2J-8")
-		benchmarks_array=("RE2J-8")
+		benchmarks_array=("RE2J-1" "RE2J-2" "RE2J-3" "RE2J-4" "RE2J-5" "RE2J-6" "RE2J-7" "RE2J-8")
+		#benchmarks_array=("RE2J-8")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -1266,15 +1266,15 @@ if [ "$input_number" -eq 16 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
-	'
+	#done
+	#'
 fi
 
 #Spoon
 if [ "$input_number" -eq 17 ] || [ "$input_number" -eq 1 ]; then
-	echo "[TARDIS LAUNCHER] No benchmark for SPOON."
-	: '
-	for EXEC_NUM in {1..3}; do
+	#echo "[TARDIS LAUNCHER] No benchmark for SPOON."
+	#: '
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="SPOON"
 		#experiment folder name
@@ -1341,15 +1341,15 @@ if [ "$input_number" -eq 17 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
-	'
+	#done
+	#'
 fi
 
 #Webmagic
 if [ "$input_number" -eq 18 ] || [ "$input_number" -eq 1 ]; then
-	echo "[TARDIS LAUNCHER] No benchmark for WEBMAGIC."
-	: '
-	for EXEC_NUM in {1..3}; do
+	#echo "[TARDIS LAUNCHER] No benchmark for WEBMAGIC."
+	#: '
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="WEBMAGIC"
 		#experiment folder name
@@ -1360,10 +1360,10 @@ if [ "$input_number" -eq 18 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name2_3_4="RunWebmagic2_3_4"
 		run_file2_3_4="RunFiles/$run_file_name2_3_4.java"
 		#array containing the benchmarks
-		#benchmarks_array1_5=("WEBMAGIC-1" "WEBMAGIC-5")
-		benchmarks_array1_5=()
-		#benchmarks_array2_3_4=("WEBMAGIC-2" "WEBMAGIC-3" "WEBMAGIC-4")
-		benchmarks_array2_3_4=("WEBMAGIC-2" "WEBMAGIC-4")
+		benchmarks_array1_5=("WEBMAGIC-1" "WEBMAGIC-5")
+		#benchmarks_array1_5=()
+		benchmarks_array2_3_4=("WEBMAGIC-2" "WEBMAGIC-3" "WEBMAGIC-4")
+		#benchmarks_array2_3_4=("WEBMAGIC-2" "WEBMAGIC-4")
 		#length
 		number1_5=${#benchmarks_array1_5[@]}
 		number2_3_4=${#benchmarks_array2_3_4[@]}
@@ -1451,8 +1451,8 @@ if [ "$input_number" -eq 18 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
-	'
+	#done
+	#'
 fi
 
 #Zxing !!! BROKEN PROJECT BUILD !!!
@@ -1530,7 +1530,7 @@ fi
 
 #Weka
 if [ "$input_number" -eq 20 ] || [ "$input_number" -eq 1 ]; then
-	for EXEC_NUM in {1..3}; do
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="WEKA"
 		#experiment folder name
@@ -1539,8 +1539,8 @@ if [ "$input_number" -eq 20 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunWeka"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		#benchmarks_array=("WEKA-673" "WEKA-460" "WEKA-983" "WEKA-741" "WEKA-53" "WEKA-303" "WEKA-1127" "WEKA-576" "WEKA-7" "WEKA-592" "WEKA-871" "WEKA-79" "WEKA-763" "WEKA-1088" "WEKA-1006" "WEKA-563" "WEKA-151" "WEKA-577")
-		benchmarks_array=("WEKA-983")
+		benchmarks_array=("WEKA-673" "WEKA-460" "WEKA-983" "WEKA-741" "WEKA-53" "WEKA-303" "WEKA-7" "WEKA-592" "WEKA-871" "WEKA-79" "WEKA-763" "WEKA-1088" "WEKA-577")
+		#benchmarks_array=("WEKA-983")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -1598,14 +1598,14 @@ if [ "$input_number" -eq 20 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
+	#done
 fi
 
 #Fastjson9th
 if [ "$input_number" -eq 21 ] || [ "$input_number" -eq 1 ]; then
-	echo "[TARDIS LAUNCHER] No benchmark for FASTJSON9TH."
-	: '
-	for EXEC_NUM in {1..3}; do
+	#echo "[TARDIS LAUNCHER] No benchmark for FASTJSON9TH."
+	#: '
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="FASTJSON9TH"
 		#experiment folder name
@@ -1614,8 +1614,8 @@ if [ "$input_number" -eq 21 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunFastjson9th"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		#benchmarks_array=("FASTJSON-999" "FASTJSON-11" "FASTJSON-17" "FASTJSON-29" "FASTJSON-36" "FASTJSON-45" "FASTJSON-49" "FASTJSON-57" "FASTJSON-65" "FASTJSON-72" "FASTJSON-78" "FASTJSON-79" "FASTJSON-86" "FASTJSON-94" "FASTJSON-99" "FASTJSON-100" "FASTJSON-108" "FASTJSON-113" "FASTJSON-120")
-		benchmarks_array=("FASTJSON-113" "FASTJSON-120")
+		benchmarks_array=("FASTJSON-999" "FASTJSON-11" "FASTJSON-29" "FASTJSON-36" "FASTJSON-45" "FASTJSON-49" "FASTJSON-57" "FASTJSON-65" "FASTJSON-72" "FASTJSON-78" "FASTJSON-79" "FASTJSON-86" "FASTJSON-94" "FASTJSON-99" "FASTJSON-100" "FASTJSON-108" "FASTJSON-113" "FASTJSON-120")
+		#benchmarks_array=("FASTJSON-113" "FASTJSON-120")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -1673,13 +1673,13 @@ if [ "$input_number" -eq 21 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
-	'
+	#done
+	#'
 fi
 
 #Guava9th
 if [ "$input_number" -eq 22 ] || [ "$input_number" -eq 1 ]; then
-	for EXEC_NUM in {1..3}; do
+	#for EXEC_NUM in {1..3}; do
 		#experiment
 		project_name="GUAVA9TH"
 		#experiment folder name
@@ -1688,8 +1688,8 @@ if [ "$input_number" -eq 22 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunGuava9th"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		#benchmarks_array=("GUAVA-71" "GUAVA-273" "GUAVA-11" "GUAVA-999" "GUAVA-998" "GUAVA-200" "GUAVA-254" "GUAVA-192" "GUAVA-96" "GUAVA-267" "GUAVA-232" "GUAVA-227" "GUAVA-156" "GUAVA-118" "GUAVA-61" "GUAVA-199" "GUAVA-226" "GUAVA-213" "GUAVA-148")
-		benchmarks_array=("GUAVA-999")
+		benchmarks_array=("GUAVA-71" "GUAVA-273" "GUAVA-11" "GUAVA-999" "GUAVA-998" "GUAVA-200" "GUAVA-192" "GUAVA-96" "GUAVA-267" "GUAVA-232" "GUAVA-156" "GUAVA-118" "GUAVA-213" "GUAVA-148")
+		#benchmarks_array=("GUAVA-999")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -1747,7 +1747,7 @@ if [ "$input_number" -eq 22 ] || [ "$input_number" -eq 1 ]; then
 		source NewGenerateResult.sh
 
 		cd "$REPO_HOME_PATH"
-	done
+	#done
 fi
 
 #MIPC
