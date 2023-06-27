@@ -176,7 +176,7 @@ if [ "$input_number" -eq 2 ] || [ "$input_number" -eq 1 ]; then
 
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file
-
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file
 		
 		for BENCHMARK in "${benchmarks_array[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
@@ -254,7 +254,7 @@ if [ "$input_number" -eq 3 ] || [ "$input_number" -eq 1 ]; then
 
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file
-
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file
 		
 		for BENCHMARK in "${benchmarks_array[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
@@ -330,7 +330,8 @@ if [ "$input_number" -eq 4 ]; then #|| [ "$input_number" -eq 1 ]
 
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file
-
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file
+		
 		for BENCHMARK in "${benchmarks_array[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
 
@@ -403,6 +404,7 @@ if [ "$input_number" -eq 5 ] || [ "$input_number" -eq 1 ]; then
 
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file
 
 		for BENCHMARK in "${benchmarks_array[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
@@ -478,6 +480,7 @@ if [ "$input_number" -eq 6 ] || [ "$input_number" -eq 1 ]; then
 
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file
 
 		for BENCHMARK in "${benchmarks_array[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
@@ -552,6 +555,7 @@ if [ "$input_number" -eq 7 ] || [ "$input_number" -eq 1 ]; then
 
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file
 
 		for BENCHMARK in "${benchmarks_array[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
@@ -625,6 +629,7 @@ if [ "$input_number" -eq 8 ] || [ "$input_number" -eq 1 ]; then
 
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file
 
 		for BENCHMARK in "${benchmarks_array[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
@@ -698,6 +703,7 @@ if [ "$input_number" -eq 9 ] || [ "$input_number" -eq 1 ]; then
 
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file
 
 		for BENCHMARK in "${benchmarks_array[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
@@ -773,6 +779,7 @@ if [ "$input_number" -eq 10 ] || [ "$input_number" -eq 1 ]; then
 
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file
 
 		for BENCHMARK in "${benchmarks_array[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
@@ -849,6 +856,7 @@ if [ "$input_number" -eq 11 ] || [ "$input_number" -eq 1 ]; then
 
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file
 
 		for BENCHMARK in "${benchmarks_array[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
@@ -923,6 +931,7 @@ if [ "$input_number" -eq 12 ] || [ "$input_number" -eq 1 ]; then
 
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file
 
 		for BENCHMARK in "${benchmarks_array[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
@@ -1071,6 +1080,7 @@ if [ "$input_number" -eq 14 ] || [ "$input_number" -eq 1 ]; then
 
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file
 
 		for BENCHMARK in "${benchmarks_array[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
@@ -1145,6 +1155,7 @@ if [ "$input_number" -eq 15 ] || [ "$input_number" -eq 1 ]; then
 
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file
 
 		for BENCHMARK in "${benchmarks_array[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
@@ -1220,6 +1231,7 @@ if [ "$input_number" -eq 16 ] || [ "$input_number" -eq 1 ]; then
 
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file
 
 		for BENCHMARK in "${benchmarks_array[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
@@ -1295,6 +1307,7 @@ if [ "$input_number" -eq 17 ] || [ "$input_number" -eq 1 ]; then
 
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file
 
 		for BENCHMARK in "${benchmarks_array[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
@@ -1378,6 +1391,8 @@ if [ "$input_number" -eq 18 ] || [ "$input_number" -eq 1 ]; then
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file1_5
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file2_3_4
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file1_5
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file2_3_4
 
 		for BENCHMARK in "${benchmarks_array1_5[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
@@ -1552,6 +1567,7 @@ if [ "$input_number" -eq 20 ] || [ "$input_number" -eq 1 ]; then
 
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file
 
 		for BENCHMARK in "${benchmarks_array[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
@@ -1627,6 +1643,7 @@ if [ "$input_number" -eq 21 ] || [ "$input_number" -eq 1 ]; then
 
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file
 
 		for BENCHMARK in "${benchmarks_array[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
@@ -1701,6 +1718,7 @@ if [ "$input_number" -eq 22 ] || [ "$input_number" -eq 1 ]; then
 
 		#set evosuiteMultiSearch
 		sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" $run_file
+		sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" $run_file
 
 		for BENCHMARK in "${benchmarks_array[@]}"; do
 			echo "[TARDIS LAUNCHER] Run benchmark $project_name -- Target class: $BENCHMARK"
@@ -1757,6 +1775,7 @@ if [ "$input_number" -eq 23 ] || [ "$input_number" -eq 1 ]; then
 	mkdir -p $LOG_PATH/$dt/MIPC
 
 	sed -i "s/\(.*\)setEvosuiteMultiSearch.*/\1setEvosuiteMultiSearch($evosuiteMultiSearch);/" RunFiles/RunMIPC.java
+	sed -i "s/\(.*\)setGlobalTimeBudgetDuration.*/\1setGlobalTimeBudgetDuration($globalTime);/" RunFiles/RunMIPC.java
 	
 	BENCHMARK="MIPC"
 	
