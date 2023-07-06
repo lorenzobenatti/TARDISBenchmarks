@@ -19,7 +19,7 @@ LOG_PATH=/dev/hd2/tardisBenattiScripts/tardisLogs
 TOOLSJAR_PATH=/dev/hd2/usr/lib/jvm/jdk1.8.0_261/lib
 # -------------------------------------------------------------------------------
 
-globalTime=30
+globalTime=15
 
 # kill all processes made by benatti which aren't system processes, which isn't the current process, which isn't a bash process and which isn't one of the processes which must be still running for xrdp
 
@@ -163,8 +163,8 @@ if [ "$input_number" -eq 2 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunAuthzforce1"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		benchmarks_array=("AUTHZFORCE-1" "AUTHZFORCE-11" "AUTHZFORCE-27" "AUTHZFORCE-32" "AUTHZFORCE-33" "AUTHZFORCE-48")
-		#benchmarks_array=("AUTHZFORCE-48")
+		#benchmarks_array=("AUTHZFORCE-1" "AUTHZFORCE-11" "AUTHZFORCE-27" "AUTHZFORCE-32" "AUTHZFORCE-33" "AUTHZFORCE-48")
+		benchmarks_array=("AUTHZFORCE-33")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -241,8 +241,8 @@ if [ "$input_number" -eq 3 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunBcel"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		benchmarks_array=("BCEL-1" "BCEL-2" "BCEL-3" "BCEL-4" "BCEL-5" "BCEL-6" "BCEL-7")
-		#benchmarks_array=()
+		#benchmarks_array=("BCEL-1" "BCEL-2" "BCEL-3" "BCEL-4" "BCEL-5" "BCEL-6" "BCEL-7")
+		benchmarks_array=("BCEL-7")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -317,8 +317,8 @@ if [ "$input_number" -eq 4 ]; then #|| [ "$input_number" -eq 1 ]
 		run_file_name="RunDubbo"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		benchmarks_array=("DUBBO-2" "DUBBO-3" "DUBBO-4" "DUBBO-5" "DUBBO-6" "DUBBO-7" "DUBBO-8" "DUBBO-9" "DUBBO-10")
-        #benchmarks_array=("DUBBO-3")
+		#benchmarks_array=("DUBBO-2" "DUBBO-3" "DUBBO-4" "DUBBO-5" "DUBBO-6" "DUBBO-7" "DUBBO-8" "DUBBO-9" "DUBBO-10")
+        benchmarks_array=()
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -391,8 +391,8 @@ if [ "$input_number" -eq 5 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunFastjson"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		benchmarks_array=("FASTJSON-2" "FASTJSON-3" "FASTJSON-4" "FASTJSON-5" "FASTJSON-6" "FASTJSON-7" "FASTJSON-8" "FASTJSON-9" "FASTJSON-10")
-		#benchmarks_array=("FASTJSON-8")
+		#benchmarks_array=("FASTJSON-2" "FASTJSON-3" "FASTJSON-4" "FASTJSON-5" "FASTJSON-6" "FASTJSON-7" "FASTJSON-8" "FASTJSON-9" "FASTJSON-10")
+		benchmarks_array=()
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -467,8 +467,8 @@ if [ "$input_number" -eq 6 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunFescar"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		benchmarks_array=("FESCAR-18" "FESCAR-23" "FESCAR-36" "FESCAR-2" "FESCAR-5" "FESCAR-9" "FESCAR-10" "FESCAR-13" "FESCAR-17" "FESCAR-28" "FESCAR-33" "FESCAR-34")
-		#benchmarks_array=("FESCAR-9")
+		#benchmarks_array=("FESCAR-18" "FESCAR-23" "FESCAR-36" "FESCAR-2" "FESCAR-5" "FESCAR-9" "FESCAR-10" "FESCAR-13" "FESCAR-17" "FESCAR-28" "FESCAR-33" "FESCAR-34")
+		benchmarks_array=("FESCAR-10")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -542,8 +542,8 @@ if [ "$input_number" -eq 7 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunGson"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		benchmarks_array=("GSON-1" "GSON-2" "GSON-3" "GSON-4" "GSON-5" "GSON-6" "GSON-7" "GSON-8" "GSON-9" "GSON-10")
-		#benchmarks_array=("GSON-2")
+		#benchmarks_array=("GSON-1" "GSON-2" "GSON-3" "GSON-4" "GSON-5" "GSON-6" "GSON-7" "GSON-8" "GSON-9" "GSON-10")
+		benchmarks_array=("GSON-1" "GSON-10")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -616,8 +616,8 @@ if [ "$input_number" -eq 8 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunGuava"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		benchmarks_array=("GUAVA-90" "GUAVA-128" "GUAVA-159" "GUAVA-169" "GUAVA-181" "GUAVA-184" "GUAVA-196" "GUAVA-212" "GUAVA-224")
-		#benchmarks_array=("GUAVA-181" "GUAVA-224")
+		#benchmarks_array=("GUAVA-90" "GUAVA-128" "GUAVA-159" "GUAVA-169" "GUAVA-181" "GUAVA-184" "GUAVA-196" "GUAVA-212" "GUAVA-224")
+		benchmarks_array=("GUAVA-90" "GUAVA-196")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -690,8 +690,8 @@ if [ "$input_number" -eq 9 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunImage"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		benchmarks_array=("IMAGE-2" "IMAGE-3" "IMAGE-4")
-		#benchmarks_array=("IMAGE-3")
+		#benchmarks_array=("IMAGE-2" "IMAGE-3" "IMAGE-4")
+		benchmarks_array=()
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -766,8 +766,8 @@ if [ "$input_number" -eq 10 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunJsoup"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		benchmarks_array=("JSOUP-1" "JSOUP-2" "JSOUP-3" "JSOUP-4" "JSOUP-5")
-		#benchmarks_array=("JSOUP-5")
+		#benchmarks_array=("JSOUP-1" "JSOUP-2" "JSOUP-3" "JSOUP-4" "JSOUP-5")
+		benchmarks_array=()
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -843,8 +843,8 @@ if [ "$input_number" -eq 11 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunJxpath"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		benchmarks_array=("JXPATH-1" "JXPATH-2" "JXPATH-3" "JXPATH-4" "JXPATH-5" "JXPATH-7" "JXPATH-8" "JXPATH-9" "JXPATH-10")
-        #benchmarks_array=("JXPATH-10")
+		#benchmarks_array=("JXPATH-1" "JXPATH-2" "JXPATH-3" "JXPATH-4" "JXPATH-5" "JXPATH-7" "JXPATH-8" "JXPATH-9" "JXPATH-10")
+        benchmarks_array=("JXPATH-3" "JXPATH-4")
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -918,8 +918,8 @@ if [ "$input_number" -eq 12 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunLa4j"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		benchmarks_array=("LA4J-1" "LA4J-2" "LA4J-3" "LA4J-4" "LA4J-6" "LA4J-7" "LA4J-9" "LA4J-10")
-		#benchmarks_array=("LA4J-3")
+		#benchmarks_array=("LA4J-1" "LA4J-2" "LA4J-3" "LA4J-4" "LA4J-6" "LA4J-7" "LA4J-9" "LA4J-10")
+		benchmarks_array=("LA4J-9")
 		#length
 		number=${#benchmarks_array[@]}
 

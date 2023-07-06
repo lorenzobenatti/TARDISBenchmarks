@@ -919,7 +919,7 @@ if [ "$input_number" -eq 12 ] || [ "$input_number" -eq 1 ]; then
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
 		#benchmarks_array=("LA4J-1" "LA4J-2" "LA4J-3" "LA4J-4" "LA4J-6" "LA4J-7" "LA4J-9" "LA4J-10")
-		benchmarks_array=()
+		benchmarks_array=("LA4J-10")
 		#length
 		number=${#benchmarks_array[@]}
 
