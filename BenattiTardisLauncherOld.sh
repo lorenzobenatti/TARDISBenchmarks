@@ -1067,8 +1067,8 @@ if [ "$input_number" -eq 14 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunOkio"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		benchmarks_array=("OKIO-1" "OKIO-4" "OKIO-5" "OKIO-6" "OKIO-7" "OKIO-8" "OKIO-9" "OKIO-10")
-		#benchmarks_array=("OKIO-1")
+		#benchmarks_array=("OKIO-1" "OKIO-4" "OKIO-5" "OKIO-6" "OKIO-7" "OKIO-8" "OKIO-9" "OKIO-10")
+		benchmarks_array=()
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -1142,8 +1142,8 @@ if [ "$input_number" -eq 15 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunPdfbox"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		benchmarks_array=("PDFBOX-8" "PDFBOX-22" "PDFBOX-26" "PDFBOX-40" "PDFBOX-62" "PDFBOX-83" "PDFBOX-91" "PDFBOX-117" "PDFBOX-127" "PDFBOX-157" "PDFBOX-214" "PDFBOX-220" "PDFBOX-229" "PDFBOX-234" "PDFBOX-235" "PDFBOX-265" "PDFBOX-278" "PDFBOX-285")
-		#benchmarks_array=("PDFBOX-214")
+		#benchmarks_array=("PDFBOX-8" "PDFBOX-22" "PDFBOX-26" "PDFBOX-40" "PDFBOX-62" "PDFBOX-83" "PDFBOX-91" "PDFBOX-117" "PDFBOX-127" "PDFBOX-157" "PDFBOX-214" "PDFBOX-220" "PDFBOX-229" "PDFBOX-234" "PDFBOX-235" "PDFBOX-265" "PDFBOX-278" "PDFBOX-285")
+		benchmarks_array=()
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -1218,8 +1218,8 @@ if [ "$input_number" -eq 16 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunRe2j"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		benchmarks_array=("RE2J-1" "RE2J-2" "RE2J-3" "RE2J-4" "RE2J-5" "RE2J-6" "RE2J-7" "RE2J-8")
-		#benchmarks_array=("RE2J-8")
+		#benchmarks_array=("RE2J-1" "RE2J-2" "RE2J-3" "RE2J-4" "RE2J-5" "RE2J-6" "RE2J-7" "RE2J-8")
+		benchmarks_array=()
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -1295,7 +1295,8 @@ if [ "$input_number" -eq 17 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunSpoon"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		benchmarks_array=("SPOON-105" "SPOON-25" "SPOON-253" "SPOON-65")
+		#benchmarks_array=("SPOON-105" "SPOON-25" "SPOON-253" "SPOON-65")
+		benchmarks_array=()
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -1373,10 +1374,10 @@ if [ "$input_number" -eq 18 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name2_3_4="RunWebmagic2_3_4"
 		run_file2_3_4="RunFiles/$run_file_name2_3_4.java"
 		#array containing the benchmarks
-		benchmarks_array1_5=("WEBMAGIC-1" "WEBMAGIC-5")
-		#benchmarks_array1_5=()
-		benchmarks_array2_3_4=("WEBMAGIC-2" "WEBMAGIC-3" "WEBMAGIC-4")
-		#benchmarks_array2_3_4=("WEBMAGIC-2" "WEBMAGIC-4")
+		#benchmarks_array1_5=("WEBMAGIC-1" "WEBMAGIC-5")
+		benchmarks_array1_5=()
+		#benchmarks_array2_3_4=("WEBMAGIC-2" "WEBMAGIC-3" "WEBMAGIC-4")
+		benchmarks_array2_3_4=()
 		#length
 		number1_5=${#benchmarks_array1_5[@]}
 		number2_3_4=${#benchmarks_array2_3_4[@]}
@@ -1554,8 +1555,8 @@ if [ "$input_number" -eq 20 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunWeka"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		benchmarks_array=("WEKA-673" "WEKA-460" "WEKA-983" "WEKA-741" "WEKA-53" "WEKA-303" "WEKA-7" "WEKA-592" "WEKA-871" "WEKA-79" "WEKA-763" "WEKA-1088" "WEKA-577")
-		#benchmarks_array=("WEKA-983")
+		#benchmarks_array=("WEKA-673" "WEKA-460" "WEKA-983" "WEKA-741" "WEKA-53" "WEKA-303" "WEKA-7" "WEKA-592" "WEKA-871" "WEKA-79" "WEKA-763" "WEKA-1088" "WEKA-577")
+		benchmarks_array=()
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -1630,8 +1631,8 @@ if [ "$input_number" -eq 21 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunFastjson9th"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		benchmarks_array=("FASTJSON-999" "FASTJSON-11" "FASTJSON-29" "FASTJSON-36" "FASTJSON-45" "FASTJSON-49" "FASTJSON-57" "FASTJSON-65" "FASTJSON-72" "FASTJSON-78" "FASTJSON-79" "FASTJSON-86" "FASTJSON-94" "FASTJSON-99" "FASTJSON-100" "FASTJSON-108" "FASTJSON-113" "FASTJSON-120")
-		#benchmarks_array=("FASTJSON-113" "FASTJSON-120")
+		#benchmarks_array=("FASTJSON-999" "FASTJSON-11" "FASTJSON-29" "FASTJSON-36" "FASTJSON-45" "FASTJSON-49" "FASTJSON-57" "FASTJSON-65" "FASTJSON-72" "FASTJSON-78" "FASTJSON-79" "FASTJSON-86" "FASTJSON-94" "FASTJSON-99" "FASTJSON-100" "FASTJSON-108" "FASTJSON-113" "FASTJSON-120")
+		benchmarks_array=()
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -1705,8 +1706,8 @@ if [ "$input_number" -eq 22 ] || [ "$input_number" -eq 1 ]; then
 		run_file_name="RunGuava9th"
 		run_file="RunFiles/$run_file_name.java"
 		#array containing the benchmarks
-		benchmarks_array=("GUAVA-71" "GUAVA-273" "GUAVA-11" "GUAVA-999" "GUAVA-998" "GUAVA-200" "GUAVA-192" "GUAVA-96" "GUAVA-267" "GUAVA-232" "GUAVA-156" "GUAVA-118" "GUAVA-213" "GUAVA-148")
-		#benchmarks_array=("GUAVA-999")
+		#benchmarks_array=("GUAVA-71" "GUAVA-273" "GUAVA-11" "GUAVA-999" "GUAVA-998" "GUAVA-200" "GUAVA-192" "GUAVA-96" "GUAVA-267" "GUAVA-232" "GUAVA-156" "GUAVA-118" "GUAVA-213" "GUAVA-148")
+		benchmarks_array=()
 		#length
 		number=${#benchmarks_array[@]}
 
@@ -1779,21 +1780,21 @@ if [ "$input_number" -eq 23 ] || [ "$input_number" -eq 1 ]; then
 	
 	BENCHMARK="MIPC"
 	
-	echo "[TARDIS LAUNCHER] Run MIPC -- Target class: $BENCHMARK"
+	#echo "[TARDIS LAUNCHER] Run MIPC -- Target class: $BENCHMARK"
 		
-	bash CompileAndMove.sh
+	#bash CompileAndMove.sh
 		
-	timeout -s 9 $timeoutTime java $javaMem -cp $REPO_HOME_PATH/mipc/bin:$TARDIS_HOME_PATH/master/build/libs/tardis-master-0.2.0-SNAPSHOT.jar:$TARDIS_HOME_PATH/runtime/build/libs/sushi-lib-0.2.0-SNAPSHOT.jar:$TARDIS_HOME_PATH/jbse/build/libs/jbse-0.10.0-SNAPSHOT-shaded.jar:$TARDIS_HOME_PATH/libs/evosuite-shaded-1.2.1-SNAPSHOT.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/args4j/args4j/2.32/1ccacebdf8f2db750eb09a402969050f27695fb7/args4j-2.32.jar:$TOOLSJAR_PATH/tools.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/com.github.javaparser/javaparser-core/3.15.9/998ab964f295e6cecd4467a76d4a6369a8193e5a/javaparser-core-3.15.9.jar:$TARDIS_HOME_PATH/jbse/libs/javassist.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.jacoco/org.jacoco.core/0.7.5.201505241946/1ea906dc5201d2a1bc0604f8650534d4bcaf4c95/org.jacoco.core-0.7.5.201505241946.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.ow2.asm/asm-debug-all/5.0.1/f69b5f7d96cec0d448acf1c1a266584170c9643b/asm-debug-all-5.0.1.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.14.0/23cdb2c6babad9b2b0dcf47c6a2c29d504e4c7a8/log4j-api-2.14.0.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.14.0/e257b0562453f73eabac1bc3181ba33e79d193ed/log4j-core-2.14.0.jar RunMIPC |& tee $LOG_PATH/$dt/MIPC/tardisLog$BENCHMARK.txt
+	#timeout -s 9 $timeoutTime java $javaMem -cp $REPO_HOME_PATH/mipc/bin:$TARDIS_HOME_PATH/master/build/libs/tardis-master-0.2.0-SNAPSHOT.jar:$TARDIS_HOME_PATH/runtime/build/libs/sushi-lib-0.2.0-SNAPSHOT.jar:$TARDIS_HOME_PATH/jbse/build/libs/jbse-0.10.0-SNAPSHOT-shaded.jar:$TARDIS_HOME_PATH/libs/evosuite-shaded-1.2.1-SNAPSHOT.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/args4j/args4j/2.32/1ccacebdf8f2db750eb09a402969050f27695fb7/args4j-2.32.jar:$TOOLSJAR_PATH/tools.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/com.github.javaparser/javaparser-core/3.15.9/998ab964f295e6cecd4467a76d4a6369a8193e5a/javaparser-core-3.15.9.jar:$TARDIS_HOME_PATH/jbse/libs/javassist.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.jacoco/org.jacoco.core/0.7.5.201505241946/1ea906dc5201d2a1bc0604f8650534d4bcaf4c95/org.jacoco.core-0.7.5.201505241946.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.ow2.asm/asm-debug-all/5.0.1/f69b5f7d96cec0d448acf1c1a266584170c9643b/asm-debug-all-5.0.1.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.14.0/23cdb2c6babad9b2b0dcf47c6a2c29d504e4c7a8/log4j-api-2.14.0.jar:$GRADLE_REPO_PATH/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.14.0/e257b0562453f73eabac1bc3181ba33e79d193ed/log4j-core-2.14.0.jar RunMIPC |& tee $LOG_PATH/$dt/MIPC/tardisLog$BENCHMARK.txt
 		
-	echo "[TARDIS LAUNCHER] Tardis execution finished. You have to create the folder in /dev/hd2/tardisBenattiScripts/results by yourself"
-	echo "(execute /dev/hd2/tardisBenattiScripts/GenerateResult.sh with the arguments 'mipc' and a string for the result folder name)"
+	#echo "[TARDIS LAUNCHER] Tardis execution finished. You have to create the folder in /dev/hd2/tardisBenattiScripts/results by yourself"
+	#echo "(execute /dev/hd2/tardisBenattiScripts/GenerateResult.sh with the arguments 'mipc' and a string for the result folder name)"
 		
-	TMPDIR=$(ls -td $REPO_HOME_PATH/mipc/tardis-tmp/* | head -1)
+	#TMPDIR=$(ls -td $REPO_HOME_PATH/mipc/tardis-tmp/* | head -1)
 		
-	foldersize=$(du -sm $TMPDIR | cut -f1)
-	if [[ $foldersize -gt $sizeThreshold ]]; then
-		mkdir "${TMPDIR}_lite" ; cp -r $TMPDIR/test "${TMPDIR}_lite" ; rm -r $TMPDIR
-	fi
+	#foldersize=$(du -sm $TMPDIR | cut -f1)
+	#if [[ $foldersize -gt $sizeThreshold ]]; then
+	#	mkdir "${TMPDIR}_lite" ; cp -r $TMPDIR/test "${TMPDIR}_lite" ; rm -r $TMPDIR
+	#fi
 fi
 
 #if set, stop system resources logging script
